@@ -105,6 +105,7 @@
     const back=event.target.closest('.back-btn');
     if(back){event.preventDefault();event.stopPropagation();window.print();return;}
     const link=event.target.closest('a');
+    if(link?.id==='health-declaration-link'&&link.getAttribute('href')==='https://ehr.wanmei.com/res/69cb0104f2a6464cbb5bf730b4fa2934'&&link.target==='_blank')return;
     if(link?.getAttribute('href')?.match(/^https?:/)){event.preventDefault();event.stopPropagation();notify('离线版本未打开外部服务。');}
   },true);
 })();
@@ -119,7 +120,7 @@
     function HealthAcknowledgement({checked = false, onChange, id}) {
       return h('label', {className: 'health-choice'},
         h('input', {id, type: 'checkbox', checked, onChange: event => onChange(event.target.checked)}),
-        h('span', null, '已阅读并同意《入职健康情况声明及承诺函》'));
+        h('span', null, '已阅读并同意', h('a', {id: 'health-declaration-link', href: 'https://ehr.wanmei.com/res/69cb0104f2a6464cbb5bf730b4fa2934', target: '_blank', rel: 'noopener noreferrer', style: {color: '#1677ff'}}, '《入职健康情况声明及承诺函》')));
     }
 
     function HealthChoices({value, onChange, id}) {
