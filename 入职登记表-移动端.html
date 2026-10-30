@@ -68,8 +68,9 @@ dialog p { margin: 0 0 20px; font-size: 14px; line-height: 24px; color: #667085;
     <form id="health-form" autocomplete="off">
       <section aria-labelledby="health-notice-title">
         <h2 id="health-notice-title" class="health-section-title">健康告知</h2>
-        <p class="health-notice-copy">为保障员工在职期间正常履行岗位职责，请您审慎评估自身健康状况，如实告知可能影响您正常开展本岗位工作的相关健康信息（重大病史、工伤史、传染病史等）。</p>
+        <p class="health-notice-copy">为保障员工在职期间正常履行岗位职责，请您审慎评估自身健康状况，如实告知可能影响您正常开展本岗位工作的相关健康信息（重大疾病、工伤、传染病等）。</p>
       </section>
+      <label class="health-option health-acceptance"><input type="checkbox" id="health-declaration-accepted" name="healthDeclarationAccepted"><span>已阅读并同意《入职健康情况声明及承诺函》</span></label>
       <fieldset class="health-confirmation">
         
         <label class="health-option"><input type="radio" name="healthDisclosureStatus" value="none"><span>本人无上述范围内的健康状况需告知。</span></label>
@@ -90,13 +91,14 @@ dialog p { margin: 0 0 20px; font-size: 14px; line-height: 24px; color: #667085;
   const storageKey = 'wanmei-entry-mobile-health-v1';
   const byId = id => document.getElementById(id);
   const home = byId('home-page'), collection = byId('personal-info-page'), health = byId('health-page'), details = byId('health-details');
+  const acceptance = byId('health-declaration-accepted');
   const radios = [...document.querySelectorAll('input[name="healthDisclosureStatus"]')];
-  let saved = {healthDisclosureStatus: '', healthDisclosureDetails: ''};
+  let saved = {healthDeclarationAccepted: false, healthDisclosureStatus: '', healthDisclosureDetails: ''};
   let dirty = false, activePage = '', pendingPage = 'info', toastTimer;
   try {
     const parsed = JSON.parse(localStorage.getItem(storageKey) || 'null');
     if (parsed?.data && ['', 'none', 'disclose'].includes(parsed.data.healthDisclosureStatus)) {
-      saved = {healthDisclosureStatus: parsed.data.healthDisclosureStatus, healthDisclosureDetails: typeof parsed.data.healthDisclosureDetails === 'string' ? parsed.data.healthDisclosureDetails : ''};
+      saved = {healthDeclarationAccepted: parsed.data.healthDeclarationAccepted === true, healthDisclosureStatus: parsed.data.healthDisclosureStatus, healthDisclosureDetails: typeof parsed.data.healthDisclosureDetails === 'string' ? parsed.data.healthDisclosureDetails : ''};
     }
   } catch {}
   function toast(message) {
@@ -105,7 +107,7 @@ dialog p { margin: 0 0 20px; font-size: 14px; line-height: 24px; color: #667085;
   }
   function readForm() {
     const status = radios.find(r => r.checked)?.value || '';
-    return {healthDisclosureStatus: status, healthDisclosureDetails: status === 'disclose' ? details.value : ''};
+    return {healthDeclarationAccepted: acceptance.checked, healthDisclosureStatus: status, healthDisclosureDetails: status === 'disclose' ? details.value : ''};
   }
   function updateDetails() {
     const visible = radios.some(r => r.checked && r.value === 'disclose');
@@ -113,16 +115,17 @@ dialog p { margin: 0 0 20px; font-size: 14px; line-height: 24px; color: #667085;
     radios[1].setAttribute('aria-expanded', String(visible));
   }
   function applySaved() {
+    acceptance.checked = saved.healthDeclarationAccepted;
     for (const radio of radios) radio.checked = radio.value === saved.healthDisclosureStatus;
     details.value = saved.healthDisclosureDetails || '';dirty = false;updateDetails();
   }
   function healthComplete() {
-    return saved.healthDisclosureStatus === 'none' || (saved.healthDisclosureStatus === 'disclose' && !!saved.healthDisclosureDetails.trim());
+    return saved.healthDeclarationAccepted && (saved.healthDisclosureStatus === 'none' || (saved.healthDisclosureStatus === 'disclose' && !!saved.healthDisclosureDetails.trim()));
   }
   function updateStatus() {
     const status = byId('health-task-status');
     const complete = healthComplete();
-    const pending = saved.healthDisclosureStatus === 'disclose' && !complete;
+    const pending = !complete && (saved.healthDeclarationAccepted || !!saved.healthDisclosureStatus);
     status.textContent = complete ? '已完成' : pending ? '待补充' : '待完成';
     status.className = complete ? 'finish' : pending ? 'health-pending' : 'unfinish';
     byId('health-task').setAttribute('aria-label', '个人健康申报，' + status.textContent);
@@ -185,6 +188,7 @@ dialog p { margin: 0 0 20px; font-size: 14px; line-height: 24px; color: #667085;
   byId('save-and-return').addEventListener('click', () => {if (save()) {byId('leave-dialog').close();location.hash = pendingPage;}});
   byId('health-form').addEventListener('submit', e => {e.preventDefault();save();});
   for (const radio of radios) radio.addEventListener('change', () => {updateDetails();dirty = JSON.stringify(readForm()) !== JSON.stringify(saved);});
+  acceptance.addEventListener('change', () => {dirty = JSON.stringify(readForm()) !== JSON.stringify(saved);});
   details.addEventListener('input', () => {dirty = JSON.stringify(readForm()) !== JSON.stringify(saved);});
   byId('submit-personal-info').addEventListener('click', () => {
     if (!byId('info-share-consent').checked || !byId('info-privacy-consent').checked) return toast('请确认并勾选以上承诺后再点击提交');
