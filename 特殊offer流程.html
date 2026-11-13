@@ -1,0 +1,4471 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'"><title>特殊offer流程</title><style>*{box-sizing:border-box}body{margin:0;color:#444;font:13px Arial,"Microsoft YaHei",sans-serif;background:#f0f1f2}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button:focus-visible,a:focus-visible{outline:2px solid #6797d9;outline-offset:2px}input,select,textarea{border:1px solid #c5c5c5;border-radius:3px;background:#fff;color:#333;min-height:29px;padding:4px 7px;max-width:100%}input:focus,select:focus,textarea:focus{outline:1px solid #829de4;border-color:#829de4}textarea{resize:vertical;width:100%;line-height:1.6}input[readonly],input:disabled,select:disabled,textarea:disabled{background:#f1f1f1;color:#666;opacity:1}input[type=radio],input[type=checkbox]{min-height:0;accent-color:#629bc9}a,.link{color:#587cc0}.link{border:0;background:none;padding:0;cursor:pointer;font-size:inherit}.link:hover{text-decoration:underline}[hidden]{display:none!important}.topbar{height:70px;background:#fff;border-bottom:1px solid #eee;display:flex;align-items:center;gap:32px;padding-left:218px;position:sticky;top:0;z-index:10}.brand{height:70px;background:#ffa095;color:#fff;padding:0 15px;display:flex;align-items:center;font-weight:bold}.local-badge{font-size:12px;background:#f5f5f5;border:1px solid #e5e5e5;border-radius:12px;padding:3px 9px;color:#888}.user{margin-left:auto;margin-right:40px;color:#888}.sidebar{position:fixed;left:0;top:70px;bottom:0;width:218px;background:#fff;overflow:auto;padding:14px 0}.nav-group{border:0}.nav-group summary{cursor:pointer;list-style:none;padding:20px 24px;font-weight:bold;position:relative}.nav-group summary::before{content:'▰';color:#526582;margin-right:15px;font-size:17px}.nav-group[open] summary{color:#ff6857}.nav-group[open] summary::before{color:#ff6857}.nav-group[open] summary::after{content:'';position:absolute;right:0;top:10px;bottom:10px;width:4px;background:#ff6857}.nav-items{padding:2px 0 12px}.nav-items a,.nav-items span{display:block;padding:11px 18px 11px 60px;text-decoration:none;color:#777}.nav-items .selected{color:#ff6857;background:#fff5f3;border-right:3px solid #ff6857}.nav-items .selected:hover{background:#fff0ed}main{margin-left:218px;padding:40px 32px}.breadcrumb{color:#888;margin:14px 0 18px}.breadcrumb span{padding:0 10px;color:#bbb}.breadcrumb b{font-weight:normal;color:#ff6857}.workspace{background:white;min-height:520px;padding-top:15px}.tabs{display:flex;gap:6px;border-bottom:1px solid #ccc;padding:0 20px;overflow:auto}.tabs button,.editor-tabs button{white-space:nowrap;border:1px solid #c4c4c4;border-bottom:0;border-radius:3px 3px 0 0;background:linear-gradient(#fff,#fafafa);padding:7px 19px;color:#333}.tabs button[aria-selected=true],.editor-tabs button[aria-selected=true]{background:#cbeada;border-color:#95cfb4;font-weight:bold}.list-content{padding:0 14px 8px;max-width:1500px}.section-line{display:flex;align-items:center;border-bottom:1px solid #ddd;min-height:63px;gap:40px}.section-line h1{font-size:14px;font-weight:normal;margin:0;min-width:50%}.classic-button{border:1px solid #bcbcbc;border-radius:4px;background:linear-gradient(#fff,#e6e6e6);padding:6px 20px;min-height:30px;box-shadow:0 1px 2px #0002;color:#222}.classic-button:hover{background:linear-gradient(#f8f8f8,#d9e5ed)}.classic-button.primary{background:#d6ebdf;border-color:#9dc3ad}.search-form{display:flex;justify-content:flex-end;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid #ddd}.search-form input{width:160px;margin-left:12px}.grid-toolbar{display:flex;align-items:center;min-height:44px;border:1px solid #ddd;border-bottom:0;margin-top:22px;padding:5px 8px;gap:16px}.grid-actions{position:relative;display:flex;gap:12px}.grid-actions>button,.pagination>button{border:0;background:none;color:#777;font-size:18px;padding:2px 4px}.grid-menu{position:absolute;left:0;top:30px;z-index:5;width:170px;border:1px solid #ccc;background:#fff;box-shadow:0 4px 16px #0002;padding:4px}.grid-menu button{display:block;border:0;background:#fff;padding:10px;width:100%;text-align:left}.grid-menu button:hover{background:#f0f5f4}.pagination{margin-left:auto;display:flex;align-items:center;gap:14px}.pagination select{min-height:25px;font-size:12px;padding:2px 4px}.pagination button:disabled{opacity:.25}#result-count{color:#999;font-size:12px}.table-wrap{overflow:auto;border:1px solid #ddd}#offer-table{width:100%;border-collapse:collapse;font-size:12px;min-width:1050px;table-layout:auto}th{background:#eee;font-weight:bold;text-align:left;border-bottom:1px solid #d9d9d9;padding:9px 7px;white-space:nowrap}th button{background:none;border:0;text-align:left;font:inherit;padding:0;color:#333}td{border-bottom:1px solid #eee;padding:10px 7px;line-height:1.5;vertical-align:middle}tbody tr:nth-child(even){background:#fafafa}tbody tr:hover{background:#f1f7f4}td.department{min-width:140px;max-width:220px}td.row-actions{min-width:110px}td .link{display:inline-block;margin:1px 4px 1px 0}td.nowrap{white-space:nowrap}.empty{text-align:center;color:#999;padding:45px}.bottom-tabs{display:flex;margin-top:12px;gap:0;border-top:1px solid #ddd;padding-top:10px}.bottom-tabs button{border:0;border-right:1px solid #ccc;background:none;color:#587cc0;padding:0 12px}.bottom-tabs button:first-child{padding-left:0}.bottom-tabs button:last-child{border:0}.bottom-tabs .active{color:#666}.workspace.expanded{position:fixed;inset:20px;z-index:50;overflow:auto;box-shadow:0 8px 40px #0004}.workspace.expanded .list-content{max-width:none}.signal{font-size:11px;border-radius:3px;padding:1px 5px;display:inline-block}.signal.red{background:#fff0ef;color:#c94646}.signal.orange{background:#fff3dd;color:#b67a12}.signal.green{background:#e8f5ec;color:#45835b}dialog{padding:0;border:1px solid #bbb;border-radius:3px;color:#444;background:#fff;box-shadow:0 8px 34px #0004;max-width:94vw}dialog::backdrop{background:#0004}#editor{width:1270px;height:min(90vh,1020px)}.dialog-heading{height:45px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #ddd;background:#f6f6f6;position:relative}.dialog-heading h2{font-size:16px;font-weight:bold;color:#b3824e;margin:0}.dialog-heading>button{position:absolute;right:12px;top:8px;border:0;background:none;font-size:23px;color:#777}.editor-scroll{padding:18px 28px 30px;overflow:auto;height:calc(100% - 45px)}.editor-tabs{display:flex;gap:6px;border-bottom:1px solid #ccc;margin-bottom:18px}.record-meta{display:flex;gap:60px;padding:5px 0 20px}.record-meta .link{margin-left:auto}.record-meta b{font-weight:normal;padding-left:6px}.offer-types{display:flex;gap:22px;padding:8px 0 22px}.offer-types label{display:flex;align-items:center;gap:5px}.form-section{margin:0 0 24px;border:0;padding:0}.form-section h3,.form-section summary{font-size:14px;margin:0 0 18px;padding:8px 0;border-bottom:1px solid #ccc;font-weight:bold}.form-section summary{cursor:pointer}.form-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:55px;row-gap:12px;align-items:start}.field{display:grid;grid-template-columns:155px minmax(0,1fr);align-items:start;gap:8px;min-height:31px}.field>label{padding:7px 0;text-align:right;color:#666}.field .required{color:#b64d43}.field.full{grid-column:1/-1}.field-control{display:flex;align-items:center;gap:5px}.field-control input:not([type=checkbox]),.field-control select{width:100%;min-width:0}.field-control .lookup{border:1px solid #ccc;border-radius:3px;background:#f6f6f6;color:#777;padding:4px 8px;flex-shrink:0}.field-help{font-size:11px;color:#999;padding-top:4px}.check-field{padding:10px 0 4px 162px}.check-field label{display:flex;gap:8px;align-items:center}.check-field input{width:auto}.calculation{background:#f3f3f3}.bonus-area{margin:12px 0 12px 30px;padding:12px;border:1px solid #e2e2e2}.bonus-area .form-grid{margin-bottom:12px}.small-table{width:100%;border-collapse:collapse}.small-table td,.small-table th{padding:8px;border:1px solid #ddd}.small-table input,.small-table select{width:100%;min-width:55px}.attachment-table{width:100%;border-collapse:collapse;margin-bottom:16px}.attachment-table td,.attachment-table th{padding:9px 12px;border:1px solid #ddd}.attachment-table td:last-child{white-space:nowrap}.file-input{max-width:230px}.form-footer{display:flex;align-items:center;justify-content:center;gap:24px;padding:22px 0 6px}.form-footer .link{margin-left:auto}.history-nodes{display:flex;flex-wrap:wrap;gap:10px}.history-node{border:1px solid #bfd6c5;background:#f5faf6;padding:12px;min-width:150px}.history-node small{display:block;margin-top:8px;color:#888}.history-node.pending{background:#fffaf0;border-color:#e0d0a5}#form-error,#action-error{color:#b13b35;background:#fff0ed;border:1px solid #ebc6c1;padding:12px;margin:12px 0}#action-dialog{width:600px}#action-form{padding:22px}#action-body{max-height:65vh;overflow:auto;line-height:1.7}#action-body label{display:block;margin-bottom:12px}#action-body label>input:not([type=checkbox]),#action-body label>select,#action-body label>textarea{display:block;width:100%;margin-top:4px}#action-form footer{display:flex;justify-content:flex-end;gap:12px;margin-top:22px}.muted{color:#888;font-size:12px}.notice{padding:9px 12px;background:#fff9ee;border:1px solid #efdfbf;color:#8c713f;margin:12px 0}.choice-list{display:flex;flex-direction:column;gap:5px;max-height:300px;overflow:auto}.choice-list button{padding:9px 12px;text-align:left;background:#fafafa;border:1px solid #ddd}.choice-list button.selected{background:#e2f1e8;border-color:#91b69e}#toast{position:fixed;left:50%;top:90px;transform:translateX(-50%);z-index:1000;background:#fff;padding:14px 24px;box-shadow:0 4px 20px #0002;border:1px solid #b8d6c4;border-radius:4px;max-width:80vw}.interview-card{padding:16px;border:1px solid #ddd;margin-top:15px}.interview-card dl{display:grid;grid-template-columns:130px 1fr;gap:12px}.interview-card dd{margin:0}.lookup-search{width:100%;margin-bottom:14px}.readonly-note{font-size:12px;color:#999;margin:0 0 12px}.attachment-table .link{margin-right:12px}@media(max-width:1000px){.sidebar{width:180px}.topbar{padding-left:180px}main{margin-left:180px;padding:25px 18px}.nav-items a,.nav-items span{padding-left:42px}.form-grid{column-gap:20px}.field{grid-template-columns:130px 1fr}.check-field{padding-left:138px}.editor-scroll{padding:16px}}@media(max-width:700px){.sidebar{display:none}.topbar{padding-left:0;gap:15px}.topbar .user{display:none}main{margin-left:0;padding:16px 10px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.record-meta{gap:12px;flex-wrap:wrap}.tabs{padding-left:8px}.tabs button{padding:7px 12px}.section-line h1{min-width:30%}.pagination{gap:5px}.grid-toolbar{gap:5px}.form-footer{gap:14px}.brand{font-size:12px}.local-badge{font-size:11px}#editor{max-width:98vw;width:98vw;height:96vh}.record-meta .link{margin-left:0}#action-form{padding:14px}}
+</style></head>
+<body><header class="topbar"><div class="brand">HR便捷工作台</div><strong>HR小姐姐</strong><span class="local-badge">本地演示</span><span class="user">HR工作台</span></header><aside class="sidebar" id="sidebar"></aside><main><div class="breadcrumb">首页 <span>/</span> HRG自助 <span>/</span> <b>特殊offer流程</b></div><section class="workspace"><nav id="tabs" class="tabs" role="tablist" aria-label="Offer管理状态"></nav><div class="list-content"><div class="section-line"><h1 id="list-title">待操作</h1><button id="add-candidate" class="classic-button">添加候选人</button></div><form id="search-form" class="search-form" hidden><label>姓名：<input id="name-query" autocomplete="off" maxlength="40"></label><button class="classic-button">搜索</button></form><div class="grid-toolbar"><div class="grid-actions"><button title="表格操作" id="grid-menu-button" aria-label="表格操作">▦</button><button title="查找" id="find-button" aria-label="查找">⌕</button><button title="展开表格" id="zoom-button" aria-label="展开表格">⛶</button><div class="grid-menu" id="grid-menu" hidden><button id="export-button">下载列表 CSV</button><button id="columns-button">显示 / 隐藏列</button><button id="all-rows-button">查看全部行</button></div></div><span id="result-count"></span><div class="pagination"><button data-page="first" aria-label="第一页">|◂</button><button data-page="prev" aria-label="上一页">◂</button><select id="page-select" aria-label="显示范围中的行数"></select><button data-page="next" aria-label="下一页">▸</button><button data-page="last" aria-label="最后一页">▸|</button></div></div><div id="table-wrap" class="table-wrap"><table id="offer-table"><thead></thead><tbody></tbody></table></div><nav class="bottom-tabs" id="bottom-tabs" aria-label="状态快捷切换"></nav></div></section></main><div id="toast" role="status" aria-live="polite" hidden></div><dialog id="editor"><div class="dialog-heading"><h2 id="editor-title">提交特殊offer流程</h2><button id="editor-close" aria-label="关闭">×</button></div><div class="editor-scroll"><div class="editor-tabs" role="tablist"><button data-editor-tab="approval" role="tab" aria-selected="true">审批信息</button><button data-editor-tab="interview" role="tab" aria-selected="false">面试记录</button></div><div class="record-meta"><span>审批状态：<b id="record-status"></b></span><span>流程编号：<b id="record-id"></b></span><button class="link" data-close-editor>返回到列表</button></div><form id="candidate-form" novalidate><div id="approval-panel"><div class="offer-types" id="offer-types"></div><div id="form-sections"></div><div id="attachments"></div><details class="form-section" open><summary>Offer说明</summary><textarea id="offer-comments" rows="4" placeholder="请完善offer相关必要信息，辅助审批人决策（如录用背景、定薪理由、其他特别说明等）"></textarea></details><section id="approval-history" class="form-section"></section></div><div id="interview-panel" hidden></div><div id="form-error" role="alert" hidden></div><footer class="form-footer"><button type="button" class="classic-button" id="save-button">保存</button><button type="submit" class="classic-button primary" id="submit-button">提交</button><button type="button" class="link" data-close-editor>返回到列表</button></footer></form></div></dialog><dialog id="action-dialog"><div class="dialog-heading"><h2 id="action-title"></h2><button id="action-close" aria-label="关闭">×</button></div><form id="action-form"><div id="action-body"></div><div id="action-error" role="alert" hidden></div><footer><button type="button" id="action-cancel" class="classic-button">取消</button><button type="submit" id="action-confirm" class="classic-button primary">确定</button></footer></form></dialog><script>
+window.OFFER_SCHEMA = {
+  "social": [
+    {
+      "id": "IS_WFL_HIR_HDR_NAME",
+      "label": "*姓名:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SEX",
+      "label": "*性别:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "F",
+          "text": "女"
+        },
+        {
+          "value": "U",
+          "text": "未知"
+        },
+        {
+          "value": "M",
+          "text": "男"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_ENTRY_TIME",
+      "label": "*计划到岗时间:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EMAILID",
+      "label": "*电子邮件:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_NID_SPECIAL_CHAR",
+      "label": "*证件号码:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_MOBILE_PHONE",
+      "label": "*电话号码:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_HIGHEST_EDUC_LVL",
+      "label": "*最高教育程度:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "L",
+          "text": "博士后"
+        },
+        {
+          "value": "J",
+          "text": "博士研究生"
+        },
+        {
+          "value": "I",
+          "text": "硕士研究生"
+        },
+        {
+          "value": "G",
+          "text": "大学本科"
+        },
+        {
+          "value": "D",
+          "text": "大学专科"
+        },
+        {
+          "value": "N",
+          "text": "大学肄业"
+        },
+        {
+          "value": "M",
+          "text": "中专"
+        },
+        {
+          "value": "E",
+          "text": "技校"
+        },
+        {
+          "value": "T",
+          "text": "职业高中"
+        },
+        {
+          "value": "C",
+          "text": "高中"
+        },
+        {
+          "value": "B",
+          "text": "高中以下"
+        },
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_EDU_PASS",
+      "label": "*是否符合学历要求:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "N",
+          "text": "不符合"
+        },
+        {
+          "value": "Y",
+          "text": "符合"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_HIRE_WAY",
+      "label": "*招聘渠道:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "24",
+          "text": "RPO"
+        },
+        {
+          "value": "99",
+          "text": "人才库"
+        },
+        {
+          "value": "04",
+          "text": "关系户"
+        },
+        {
+          "value": "21",
+          "text": "其他"
+        },
+        {
+          "value": "03",
+          "text": "内部推荐"
+        },
+        {
+          "value": "18",
+          "text": "团队入职"
+        },
+        {
+          "value": "05",
+          "text": "外部推荐/人脉"
+        },
+        {
+          "value": "25",
+          "text": "招聘会/宣讲会"
+        },
+        {
+          "value": "06",
+          "text": "招聘官网"
+        },
+        {
+          "value": "14",
+          "text": "猎头"
+        },
+        {
+          "value": "09",
+          "text": "网络渠道-BOSS直聘"
+        },
+        {
+          "value": "08",
+          "text": "网络渠道-前程无忧"
+        },
+        {
+          "value": "17",
+          "text": "网络渠道-实习僧"
+        },
+        {
+          "value": "12",
+          "text": "网络渠道-拉勾网"
+        },
+        {
+          "value": "07",
+          "text": "网络渠道-智联"
+        },
+        {
+          "value": "13",
+          "text": "网络渠道-猎聘网"
+        },
+        {
+          "value": "15",
+          "text": "网络渠道-脉脉"
+        },
+        {
+          "value": "19",
+          "text": "网络渠道-领英"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "LS_ORGNODE_TBL_DESCR",
+      "label": "*直属部门:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "BUS_UNIT_TBL_HR_DESCR",
+      "label": "*业务单位:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "PW_ORGTREE_LINE_DESCR254",
+      "label": "各级部门:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_LOCATION_SALARY",
+      "label": "*Base城市:",
+      "type": "select-one",
+      "group": "组织架构信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "EU",
+          "text": "EU"
+        },
+        {
+          "value": "BV",
+          "text": "Perfect World Europe B.V."
+        },
+        {
+          "value": "SH",
+          "text": "上海"
+        },
+        {
+          "value": "OTH",
+          "text": "其他"
+        },
+        {
+          "value": "BJ",
+          "text": "北京"
+        },
+        {
+          "value": "NA",
+          "text": "北美"
+        },
+        {
+          "value": "TW",
+          "text": "台湾"
+        },
+        {
+          "value": "HF",
+          "text": "合肥"
+        },
+        {
+          "value": "TJ",
+          "text": "天津"
+        },
+        {
+          "value": "GZ",
+          "text": "广州"
+        },
+        {
+          "value": "DQ",
+          "text": "德清"
+        },
+        {
+          "value": "CD",
+          "text": "成都"
+        },
+        {
+          "value": "SGP",
+          "text": "新加坡"
+        },
+        {
+          "value": "XJ",
+          "text": "新疆"
+        },
+        {
+          "value": "JP",
+          "text": "日本"
+        },
+        {
+          "value": "HZ",
+          "text": "杭州"
+        },
+        {
+          "value": "WH",
+          "text": "武汉"
+        },
+        {
+          "value": "HB",
+          "text": "河北"
+        },
+        {
+          "value": "THA",
+          "text": "泰国"
+        },
+        {
+          "value": "HN",
+          "text": "海南"
+        },
+        {
+          "value": "SZ",
+          "text": "深圳"
+        },
+        {
+          "value": "FZ",
+          "text": "福州"
+        },
+        {
+          "value": "SZH",
+          "text": "苏州"
+        },
+        {
+          "value": "CQ",
+          "text": "重庆"
+        },
+        {
+          "value": "CHCH",
+          "text": "长春"
+        },
+        {
+          "value": "KOR",
+          "text": "韩国"
+        },
+        {
+          "value": "HKG",
+          "text": "香港"
+        },
+        {
+          "value": "MYS",
+          "text": "马来西亚"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "COMPANY_TBL_DESCR",
+      "label": "*合同签署公司:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_ADDRESS",
+      "label": "*办公地点:",
+      "type": "select-one",
+      "group": "组织架构信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "ABJ",
+          "text": "ABJ-北京"
+        },
+        {
+          "value": "ABJ1",
+          "text": "ABJ1-望京完美世界大厦"
+        },
+        {
+          "value": "ACD",
+          "text": "ACD-成都"
+        },
+        {
+          "value": "ACD1",
+          "text": "ACD1-天府软件园"
+        },
+        {
+          "value": "AGZ",
+          "text": "AGZ-广州"
+        },
+        {
+          "value": "AHF1",
+          "text": "AHF1-动漫产业基地"
+        },
+        {
+          "value": "AHK",
+          "text": "AHK-香港"
+        },
+        {
+          "value": "ASH",
+          "text": "ASH-上海"
+        },
+        {
+          "value": "ASH1",
+          "text": "ASH1-浦东陆家嘴软件园"
+        },
+        {
+          "value": "ATW",
+          "text": "ATW-台湾"
+        },
+        {
+          "value": "ATW1",
+          "text": "ATW1-江北市远东世纪广场"
+        },
+        {
+          "value": "B",
+          "text": "B-美国"
+        },
+        {
+          "value": "BJZ",
+          "text": "BJZ-加州 Redwood City"
+        },
+        {
+          "value": "BJZ1",
+          "text": "BJZ1-Redwood shoresPKEYSte.400"
+        },
+        {
+          "value": "BJZ2",
+          "text": "BJZ2-Los Gatos, CA"
+        },
+        {
+          "value": "BJZ3",
+          "text": "BJZ3-Santa Clara, CA"
+        },
+        {
+          "value": "BJZ4",
+          "text": "BJZ4-San Francisco"
+        },
+        {
+          "value": "BJZ5",
+          "text": "BJZ5-Los Gatos"
+        },
+        {
+          "value": "C",
+          "text": "C-荷兰"
+        },
+        {
+          "value": "CAM",
+          "text": "CAM-阿姆斯特丹"
+        },
+        {
+          "value": "CQ",
+          "text": "CQ-重庆"
+        },
+        {
+          "value": "D",
+          "text": "D-日本"
+        },
+        {
+          "value": "E",
+          "text": "E-韩国"
+        },
+        {
+          "value": "G",
+          "text": "G-泰国"
+        },
+        {
+          "value": "GCT",
+          "text": "GCT-CyberWorld Tower"
+        },
+        {
+          "value": "99",
+          "text": "H-其他"
+        },
+        {
+          "value": "TJ",
+          "text": "TJ-天津"
+        },
+        {
+          "value": "SH",
+          "text": "上海宝武大厦"
+        },
+        {
+          "value": "NC",
+          "text": "南昌"
+        },
+        {
+          "value": "SHZH",
+          "text": "深圳"
+        },
+        {
+          "value": "SZ",
+          "text": "苏州"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PW_HC_DEPT_DESCR",
+      "label": "HC编制部门:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_RECRUIT_CASE",
+      "label": "*新增/替换HC:",
+      "type": "select-one",
+      "group": "编制信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "01",
+          "text": "新增"
+        },
+        {
+          "value": "03",
+          "text": "替换"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "PW_HC_TYPE_VW_DESCR",
+      "label": "HC编制类别:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "PERSON_NAME_NAME$236$",
+      "label": "替换人员:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_TERMINATION_DT",
+      "label": "替换人员离职日期:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SUPERVISOR_ID",
+      "label": "直属上级:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "PERSON_NAME_NAME$95$",
+      "label": "直属上级姓名:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EMPL_CLASS",
+      "label": "*员工类别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "001",
+          "text": "正式员工"
+        },
+        {
+          "value": "007",
+          "text": "试用员工"
+        },
+        {
+          "value": "002",
+          "text": "返聘"
+        },
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "PERSON_NAME_NAME$93$",
+      "label": "*登陆计划主管:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_PROBATION_PERIO",
+      "label": "*试用期:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "02",
+          "text": "6个月"
+        }
+      ],
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG1",
+      "label": "*角色类别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "1",
+          "text": "1-管理"
+        },
+        {
+          "value": "9",
+          "text": "9-非管理"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG3",
+      "label": "*职业路径:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG2",
+      "label": "*职务族群:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "F",
+          "text": "业务管理类"
+        },
+        {
+          "value": "8",
+          "text": "产品群"
+        },
+        {
+          "value": "H",
+          "text": "公司高管类"
+        },
+        {
+          "value": "7",
+          "text": "商务市场与品牌群"
+        },
+        {
+          "value": "I",
+          "text": "影视类"
+        },
+        {
+          "value": "2",
+          "text": "战略投资群"
+        },
+        {
+          "value": "6",
+          "text": "技术群"
+        },
+        {
+          "value": "5",
+          "text": "服务群"
+        },
+        {
+          "value": "X",
+          "text": "桃花源"
+        },
+        {
+          "value": "3",
+          "text": "综合管理群"
+        },
+        {
+          "value": "1",
+          "text": "设计群"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "SAL_GRADE_TBL_DESCR",
+      "label": "*职级:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EEO_JOB_GROUP",
+      "label": "*序列:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_POSITION_IN",
+      "label": "*职务:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "GP_PYGRP_DESCR",
+      "label": "*薪资组:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_POSITION_OUT",
+      "label": "*业务头衔:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "Offer及合同中显示",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_KAOQIN_TYPE",
+      "label": "*考勤类型:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "17",
+          "text": "08综合09:15算迟到"
+        },
+        {
+          "value": "19",
+          "text": "10上海09:15算迟到"
+        },
+        {
+          "value": "22",
+          "text": "12成都美术09:30算迟到"
+        },
+        {
+          "value": "12",
+          "text": "不参与考勤"
+        },
+        {
+          "value": "NT",
+          "text": "中晚班弹性"
+        },
+        {
+          "value": "M6",
+          "text": "以太9:30"
+        },
+        {
+          "value": "A5",
+          "text": "全球研运10:15"
+        },
+        {
+          "value": "A6",
+          "text": "全球研运9:30"
+        },
+        {
+          "value": "G6",
+          "text": "凌霄10:00"
+        },
+        {
+          "value": "K6",
+          "text": "可持续发展10:00"
+        },
+        {
+          "value": "K7",
+          "text": "可持续发展9:15"
+        },
+        {
+          "value": "60",
+          "text": "司机不参与考勤"
+        },
+        {
+          "value": "A0",
+          "text": "国内发行10:15"
+        },
+        {
+          "value": "M9",
+          "text": "圆周率10:00"
+        },
+        {
+          "value": "M1",
+          "text": "天智游10:00"
+        },
+        {
+          "value": "M2",
+          "text": "天智游9:15"
+        },
+        {
+          "value": "61",
+          "text": "天智游工作室考勤"
+        },
+        {
+          "value": "11",
+          "text": "客服/综合工时"
+        },
+        {
+          "value": "G4",
+          "text": "幻塔9:30"
+        },
+        {
+          "value": "Y1",
+          "text": "开发运维10:00"
+        },
+        {
+          "value": "C2",
+          "text": "影视10:00"
+        },
+        {
+          "value": "C1",
+          "text": "影视9:30"
+        },
+        {
+          "value": "A3",
+          "text": "技术应用10:00"
+        },
+        {
+          "value": "K5",
+          "text": "控股发展10:30"
+        },
+        {
+          "value": "A9",
+          "text": "新品发行9:30"
+        },
+        {
+          "value": "GA",
+          "text": "新月10:00"
+        },
+        {
+          "value": "M4",
+          "text": "星云10:00"
+        },
+        {
+          "value": "M5",
+          "text": "星云10:30"
+        },
+        {
+          "value": "M3",
+          "text": "未来10:30"
+        },
+        {
+          "value": "A7",
+          "text": "桃花源10:15"
+        },
+        {
+          "value": "A8",
+          "text": "桃花源10:30"
+        },
+        {
+          "value": "A4",
+          "text": "海外发行10:15"
+        },
+        {
+          "value": "H4",
+          "text": "游戏人力10:00"
+        },
+        {
+          "value": "H1",
+          "text": "游戏人力10:30"
+        },
+        {
+          "value": "H2",
+          "text": "游戏人力9:15"
+        },
+        {
+          "value": "H3",
+          "text": "游戏人力9:30"
+        },
+        {
+          "value": "F5",
+          "text": "游戏商务10:00"
+        },
+        {
+          "value": "F2",
+          "text": "游戏并购管理10:00"
+        },
+        {
+          "value": "F1",
+          "text": "游戏并购管理10:15"
+        },
+        {
+          "value": "A1",
+          "text": "游戏法务10:00A"
+        },
+        {
+          "value": "A2",
+          "text": "游戏法务10:00B"
+        },
+        {
+          "value": "F3",
+          "text": "游戏财务10:00A"
+        },
+        {
+          "value": "F4",
+          "text": "游戏财务10:00B"
+        },
+        {
+          "value": "F6",
+          "text": "游戏资源合作10:00"
+        },
+        {
+          "value": "G0",
+          "text": "火星9:00"
+        },
+        {
+          "value": "B2",
+          "text": "用户服务10:00"
+        },
+        {
+          "value": "B1",
+          "text": "用户服务10:30"
+        },
+        {
+          "value": "D1",
+          "text": "电竞9:30"
+        },
+        {
+          "value": "G2",
+          "text": "白海豚9:45"
+        },
+        {
+          "value": "G1",
+          "text": "百万10:00"
+        },
+        {
+          "value": "G5",
+          "text": "矩阵10:30"
+        },
+        {
+          "value": "M7",
+          "text": "硬核10:00"
+        },
+        {
+          "value": "K0",
+          "text": "综合9：00"
+        },
+        {
+          "value": "F8",
+          "text": "综合事业部10:15"
+        },
+        {
+          "value": "K8",
+          "text": "综合管理10:00"
+        },
+        {
+          "value": "Y3",
+          "text": "美术平台10:00"
+        },
+        {
+          "value": "Y2",
+          "text": "美术平台10:30"
+        },
+        {
+          "value": "K3",
+          "text": "行政10:00"
+        },
+        {
+          "value": "K1",
+          "text": "行政9:15"
+        },
+        {
+          "value": "K2",
+          "text": "行政9:30"
+        },
+        {
+          "value": "K4",
+          "text": "证券10:00"
+        },
+        {
+          "value": "F7",
+          "text": "远景10:00"
+        },
+        {
+          "value": "E1",
+          "text": "邮箱10:00A"
+        },
+        {
+          "value": "E2",
+          "text": "邮箱10:00B"
+        },
+        {
+          "value": "FG",
+          "text": "阳明工作室"
+        },
+        {
+          "value": "J3",
+          "text": "集团办公室10:00"
+        },
+        {
+          "value": "J4",
+          "text": "集团办公室10:30"
+        },
+        {
+          "value": "J2",
+          "text": "集团办公室9:30A"
+        },
+        {
+          "value": "J1",
+          "text": "集团办公室9:30B"
+        },
+        {
+          "value": "J7",
+          "text": "集团发展部10:00"
+        },
+        {
+          "value": "J5",
+          "text": "集团发展部9:00"
+        },
+        {
+          "value": "J6",
+          "text": "集团发展部9:30"
+        },
+        {
+          "value": "J8",
+          "text": "集团发展部9:45"
+        },
+        {
+          "value": "K9",
+          "text": "集团财务10:15"
+        },
+        {
+          "value": "G7",
+          "text": "青云10:00"
+        },
+        {
+          "value": "Y4",
+          "text": "项目孵化10:00"
+        },
+        {
+          "value": "Y5",
+          "text": "项目孵化10:30"
+        },
+        {
+          "value": "G9",
+          "text": "顺为10:00"
+        },
+        {
+          "value": "G3",
+          "text": "黑羽9:30"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SUPV_LVL_ID",
+      "label": "*审批级别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "D1",
+          "text": "董事长"
+        },
+        {
+          "value": "E3",
+          "text": "CEO"
+        },
+        {
+          "value": "E1",
+          "text": "SVP"
+        },
+        {
+          "value": "001",
+          "text": "副总裁"
+        },
+        {
+          "value": "004",
+          "text": "总监"
+        },
+        {
+          "value": "007",
+          "text": "经理"
+        },
+        {
+          "value": "009",
+          "text": "员工"
+        },
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_PROBA_SALAR",
+      "label": "*试用期工资:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_CON_SALARY",
+      "label": "*转正工资:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_MEAL_SUP",
+      "label": "餐补:",
+      "type": "select-one",
+      "group": "薪资信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "04",
+          "text": "200"
+        },
+        {
+          "value": "00",
+          "text": "300"
+        },
+        {
+          "value": "05",
+          "text": "350"
+        },
+        {
+          "value": "01",
+          "text": "400"
+        },
+        {
+          "value": "02",
+          "text": "450"
+        },
+        {
+          "value": "03",
+          "text": "无"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_MOVE_SUBSIDY",
+      "label": "搬家费:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_ANN_BON",
+      "label": "约定年终奖月数:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "如需填写请与薪酬负责人沟通",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SINO_ER_HOUSE_ALW",
+      "label": "住房补贴/月:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_ANNUAL_SALARY",
+      "label": "TTC:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_SINO_AC_ANNBOBUS_T",
+      "label": "Offer年薪:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_HIR_SBON_TBL_PW_SIGNBONUS_FLG",
+      "label": "是否有签约金",
+      "type": "checkbox",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PW_STOCK_FLAG",
+      "label": "长期激励",
+      "type": "checkbox",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EMPLOYER",
+      "label": "上家公司名称:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_ENDING_TITLE",
+      "label": "最后职称:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_LEAVE_CASE",
+      "label": "离职原因:",
+      "type": "select-one",
+      "group": "上家公司信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "MGT",
+          "text": "主动-不适应上级管理风格"
+        },
+        {
+          "value": "MCC",
+          "text": "主动-不适应公司文化"
+        },
+        {
+          "value": "TRA",
+          "text": "主动-交通原因"
+        },
+        {
+          "value": "HEA",
+          "text": "主动-健康原因"
+        },
+        {
+          "value": "FAM",
+          "text": "主动-家庭原因"
+        },
+        {
+          "value": "WOR",
+          "text": "主动-工作内容与期望不符"
+        },
+        {
+          "value": "YAL",
+          "text": "主动-工作压力大"
+        },
+        {
+          "value": "REC",
+          "text": "主动-职业发展"
+        },
+        {
+          "value": "PAY",
+          "text": "主动-薪资原因"
+        },
+        {
+          "value": "PRJ",
+          "text": "被动-业务裁撤/项目关停"
+        },
+        {
+          "value": "CAC",
+          "text": "被动-组织架构调整/HC缩减"
+        },
+        {
+          "value": "FEC",
+          "text": "被动-考核不合格"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_PWRD_ER_BASE_SAL",
+      "label": "月薪:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_CON_SALARY$174$",
+      "label": "月薪:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_PWRD_ER_ANN_PAY",
+      "label": "年终奖:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_PWRD_ANN",
+      "label": "年终奖:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_ANNUAL_RT",
+      "label": "TTC:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_ANNUAL_SALARY$179$",
+      "label": "TTC:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_ACCRUAL_PCT$180$",
+      "label": "涨幅%",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_IS_BUDGE04",
+      "label": "福利补贴/月:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "一次性补贴除外",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_IS_BUDGE06",
+      "label": "福利补贴/月:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_IS_BUDGE05",
+      "label": "长期激励:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "股票每年价值",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PW_STOCK_VALUE$192$",
+      "label": "长期激励:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_SINO_AC_ANNBOBUS_M",
+      "label": "总计年薪:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_SINO_AC_ANNBOBUS_T$186$",
+      "label": "总计年薪:",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_ACT_PCT_COMPLETE$187$",
+      "label": "涨幅%",
+      "type": "text",
+      "group": "上家公司信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_PW_BGCHECK_TYPE",
+      "label": "*背调类型:",
+      "type": "select-one",
+      "group": "背景调查",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_PW_BGCHECK_TM",
+      "label": "*背调时间:",
+      "type": "select-one",
+      "group": "背景调查",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "M",
+          "text": "Offer邮件发送后发起"
+        },
+        {
+          "value": "O",
+          "text": "与Offer流程同步发起"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_PW_BGC_MEAL_NAME",
+      "label": "套餐名称:",
+      "type": "text",
+      "group": "背景调查",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_EMAIL_CC",
+      "label": "报告抄送邮箱:",
+      "type": "text",
+      "group": "背景调查",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_PW_REMARK",
+      "label": "重点调查:",
+      "type": "textarea",
+      "group": "背景调查",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_SEND_FLAG",
+      "label": "提供简历进行比对",
+      "type": "checkbox",
+      "group": "背景调查",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    }
+  ],
+  "campus": [
+    {
+      "id": "IS_WFL_HIR_HDR_NAME",
+      "label": "*姓名:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SEX",
+      "label": "*性别:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "F",
+          "text": "女"
+        },
+        {
+          "value": "U",
+          "text": "未知"
+        },
+        {
+          "value": "M",
+          "text": "男"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_ENTRY_TIME",
+      "label": "*计划到岗时间:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EMAILID",
+      "label": "*电子邮件:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_NID_SPECIAL_CHAR",
+      "label": "*证件号码:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_MOBILE_PHONE",
+      "label": "*电话号码:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_HIGHEST_EDUC_LVL",
+      "label": "*最高教育程度:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "L",
+          "text": "博士后"
+        },
+        {
+          "value": "J",
+          "text": "博士研究生"
+        },
+        {
+          "value": "I",
+          "text": "硕士研究生"
+        },
+        {
+          "value": "G",
+          "text": "大学本科"
+        },
+        {
+          "value": "D",
+          "text": "大学专科"
+        },
+        {
+          "value": "N",
+          "text": "大学肄业"
+        },
+        {
+          "value": "M",
+          "text": "中专"
+        },
+        {
+          "value": "E",
+          "text": "技校"
+        },
+        {
+          "value": "T",
+          "text": "职业高中"
+        },
+        {
+          "value": "C",
+          "text": "高中"
+        },
+        {
+          "value": "B",
+          "text": "高中以下"
+        },
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_EDU_PASS",
+      "label": "*是否符合学历要求:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "N",
+          "text": "不符合"
+        },
+        {
+          "value": "Y",
+          "text": "符合"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SCHOOL_GRAD",
+      "label": "*最高学历院校类型:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "B",
+          "text": "985&211"
+        },
+        {
+          "value": "A",
+          "text": "C9院校"
+        },
+        {
+          "value": "D",
+          "text": "QS200海外院校"
+        },
+        {
+          "value": "E",
+          "text": "八大美院"
+        },
+        {
+          "value": "C",
+          "text": "其他"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SCHOOL_NAME",
+      "label": "*最高学历毕业院校:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_YEARCD",
+      "label": "*校招生届次:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "2025",
+          "text": "2025"
+        },
+        {
+          "value": "2026",
+          "text": "2026"
+        },
+        {
+          "value": "2027",
+          "text": "2027"
+        },
+        {
+          "value": "2028",
+          "text": "2028"
+        },
+        {
+          "value": "2029",
+          "text": "2029"
+        },
+        {
+          "value": "2030",
+          "text": "2030"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_C_GRADUATE_LVL",
+      "label": "*校招生评级:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "A",
+          "text": "A"
+        },
+        {
+          "value": "B",
+          "text": "A+"
+        },
+        {
+          "value": "S",
+          "text": "S"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_HIRE_WAY",
+      "label": "*招聘渠道:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "24",
+          "text": "RPO"
+        },
+        {
+          "value": "99",
+          "text": "人才库"
+        },
+        {
+          "value": "04",
+          "text": "关系户"
+        },
+        {
+          "value": "21",
+          "text": "其他"
+        },
+        {
+          "value": "03",
+          "text": "内部推荐"
+        },
+        {
+          "value": "18",
+          "text": "团队入职"
+        },
+        {
+          "value": "05",
+          "text": "外部推荐/人脉"
+        },
+        {
+          "value": "25",
+          "text": "招聘会/宣讲会"
+        },
+        {
+          "value": "06",
+          "text": "招聘官网"
+        },
+        {
+          "value": "14",
+          "text": "猎头"
+        },
+        {
+          "value": "09",
+          "text": "网络渠道-BOSS直聘"
+        },
+        {
+          "value": "08",
+          "text": "网络渠道-前程无忧"
+        },
+        {
+          "value": "17",
+          "text": "网络渠道-实习僧"
+        },
+        {
+          "value": "12",
+          "text": "网络渠道-拉勾网"
+        },
+        {
+          "value": "07",
+          "text": "网络渠道-智联"
+        },
+        {
+          "value": "13",
+          "text": "网络渠道-猎聘网"
+        },
+        {
+          "value": "15",
+          "text": "网络渠道-脉脉"
+        },
+        {
+          "value": "19",
+          "text": "网络渠道-领英"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "LS_ORGNODE_TBL_DESCR",
+      "label": "*直属部门:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "BUS_UNIT_TBL_HR_DESCR",
+      "label": "*业务单位:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "PW_ORGTREE_LINE_DESCR254",
+      "label": "各级部门:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_LOCATION_SALARY",
+      "label": "*Base城市:",
+      "type": "select-one",
+      "group": "组织架构信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "EU",
+          "text": "EU"
+        },
+        {
+          "value": "BV",
+          "text": "Perfect World Europe B.V."
+        },
+        {
+          "value": "SH",
+          "text": "上海"
+        },
+        {
+          "value": "OTH",
+          "text": "其他"
+        },
+        {
+          "value": "BJ",
+          "text": "北京"
+        },
+        {
+          "value": "NA",
+          "text": "北美"
+        },
+        {
+          "value": "TW",
+          "text": "台湾"
+        },
+        {
+          "value": "HF",
+          "text": "合肥"
+        },
+        {
+          "value": "TJ",
+          "text": "天津"
+        },
+        {
+          "value": "GZ",
+          "text": "广州"
+        },
+        {
+          "value": "DQ",
+          "text": "德清"
+        },
+        {
+          "value": "CD",
+          "text": "成都"
+        },
+        {
+          "value": "SGP",
+          "text": "新加坡"
+        },
+        {
+          "value": "XJ",
+          "text": "新疆"
+        },
+        {
+          "value": "JP",
+          "text": "日本"
+        },
+        {
+          "value": "HZ",
+          "text": "杭州"
+        },
+        {
+          "value": "WH",
+          "text": "武汉"
+        },
+        {
+          "value": "HB",
+          "text": "河北"
+        },
+        {
+          "value": "THA",
+          "text": "泰国"
+        },
+        {
+          "value": "HN",
+          "text": "海南"
+        },
+        {
+          "value": "SZ",
+          "text": "深圳"
+        },
+        {
+          "value": "FZ",
+          "text": "福州"
+        },
+        {
+          "value": "SZH",
+          "text": "苏州"
+        },
+        {
+          "value": "CQ",
+          "text": "重庆"
+        },
+        {
+          "value": "CHCH",
+          "text": "长春"
+        },
+        {
+          "value": "KOR",
+          "text": "韩国"
+        },
+        {
+          "value": "HKG",
+          "text": "香港"
+        },
+        {
+          "value": "MYS",
+          "text": "马来西亚"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "COMPANY_TBL_DESCR",
+      "label": "*合同签署公司:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_ADDRESS",
+      "label": "*办公地点:",
+      "type": "select-one",
+      "group": "组织架构信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "ABJ",
+          "text": "ABJ-北京"
+        },
+        {
+          "value": "ABJ1",
+          "text": "ABJ1-望京完美世界大厦"
+        },
+        {
+          "value": "ACD",
+          "text": "ACD-成都"
+        },
+        {
+          "value": "ACD1",
+          "text": "ACD1-天府软件园"
+        },
+        {
+          "value": "AGZ",
+          "text": "AGZ-广州"
+        },
+        {
+          "value": "AHF1",
+          "text": "AHF1-动漫产业基地"
+        },
+        {
+          "value": "AHK",
+          "text": "AHK-香港"
+        },
+        {
+          "value": "ASH",
+          "text": "ASH-上海"
+        },
+        {
+          "value": "ASH1",
+          "text": "ASH1-浦东陆家嘴软件园"
+        },
+        {
+          "value": "ATW",
+          "text": "ATW-台湾"
+        },
+        {
+          "value": "ATW1",
+          "text": "ATW1-江北市远东世纪广场"
+        },
+        {
+          "value": "B",
+          "text": "B-美国"
+        },
+        {
+          "value": "BJZ",
+          "text": "BJZ-加州 Redwood City"
+        },
+        {
+          "value": "BJZ1",
+          "text": "BJZ1-Redwood shoresPKEYSte.400"
+        },
+        {
+          "value": "BJZ2",
+          "text": "BJZ2-Los Gatos, CA"
+        },
+        {
+          "value": "BJZ3",
+          "text": "BJZ3-Santa Clara, CA"
+        },
+        {
+          "value": "BJZ4",
+          "text": "BJZ4-San Francisco"
+        },
+        {
+          "value": "BJZ5",
+          "text": "BJZ5-Los Gatos"
+        },
+        {
+          "value": "C",
+          "text": "C-荷兰"
+        },
+        {
+          "value": "CAM",
+          "text": "CAM-阿姆斯特丹"
+        },
+        {
+          "value": "CQ",
+          "text": "CQ-重庆"
+        },
+        {
+          "value": "D",
+          "text": "D-日本"
+        },
+        {
+          "value": "E",
+          "text": "E-韩国"
+        },
+        {
+          "value": "G",
+          "text": "G-泰国"
+        },
+        {
+          "value": "GCT",
+          "text": "GCT-CyberWorld Tower"
+        },
+        {
+          "value": "99",
+          "text": "H-其他"
+        },
+        {
+          "value": "TJ",
+          "text": "TJ-天津"
+        },
+        {
+          "value": "SH",
+          "text": "上海宝武大厦"
+        },
+        {
+          "value": "NC",
+          "text": "南昌"
+        },
+        {
+          "value": "SHZH",
+          "text": "深圳"
+        },
+        {
+          "value": "SZ",
+          "text": "苏州"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PW_HC_DEPT_DESCR",
+      "label": "HC编制部门:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_RECRUIT_CASE",
+      "label": "*新增/替换HC:",
+      "type": "select-one",
+      "group": "编制信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "01",
+          "text": "新增"
+        },
+        {
+          "value": "03",
+          "text": "替换"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "PW_HC_TYPE_VW_DESCR",
+      "label": "HC编制类别:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "PERSON_NAME_NAME$236$",
+      "label": "替换人员:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_TERMINATION_DT",
+      "label": "替换人员离职日期:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SUPERVISOR_ID",
+      "label": "直属上级:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "PERSON_NAME_NAME$95$",
+      "label": "直属上级姓名:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EMPL_CLASS",
+      "label": "*员工类别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "001",
+          "text": "正式员工"
+        },
+        {
+          "value": "007",
+          "text": "试用员工"
+        },
+        {
+          "value": "002",
+          "text": "返聘"
+        },
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_PROBATION_PERIO",
+      "label": "*试用期:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "02",
+          "text": "6个月"
+        }
+      ],
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "PERSON_NAME_NAME$114$",
+      "label": "*小凡计划主导师:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "PERSON_NAME_NAME$116$",
+      "label": "*小凡计划Super导师:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG1",
+      "label": "*角色类别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "1",
+          "text": "1-管理"
+        },
+        {
+          "value": "9",
+          "text": "9-非管理"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG3",
+      "label": "*职业路径:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG2",
+      "label": "*职务族群:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "F",
+          "text": "业务管理类"
+        },
+        {
+          "value": "8",
+          "text": "产品群"
+        },
+        {
+          "value": "H",
+          "text": "公司高管类"
+        },
+        {
+          "value": "7",
+          "text": "商务市场与品牌群"
+        },
+        {
+          "value": "I",
+          "text": "影视类"
+        },
+        {
+          "value": "2",
+          "text": "战略投资群"
+        },
+        {
+          "value": "6",
+          "text": "技术群"
+        },
+        {
+          "value": "5",
+          "text": "服务群"
+        },
+        {
+          "value": "X",
+          "text": "桃花源"
+        },
+        {
+          "value": "3",
+          "text": "综合管理群"
+        },
+        {
+          "value": "1",
+          "text": "设计群"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "SAL_GRADE_TBL_DESCR",
+      "label": "*职级:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EEO_JOB_GROUP",
+      "label": "*序列:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_POSITION_IN",
+      "label": "*职务:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "GP_PYGRP_DESCR",
+      "label": "*薪资组:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_POSITION_OUT",
+      "label": "*业务头衔:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "Offer及合同中显示",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_KAOQIN_TYPE",
+      "label": "*考勤类型:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "17",
+          "text": "08综合09:15算迟到"
+        },
+        {
+          "value": "19",
+          "text": "10上海09:15算迟到"
+        },
+        {
+          "value": "22",
+          "text": "12成都美术09:30算迟到"
+        },
+        {
+          "value": "12",
+          "text": "不参与考勤"
+        },
+        {
+          "value": "NT",
+          "text": "中晚班弹性"
+        },
+        {
+          "value": "M6",
+          "text": "以太9:30"
+        },
+        {
+          "value": "A5",
+          "text": "全球研运10:15"
+        },
+        {
+          "value": "A6",
+          "text": "全球研运9:30"
+        },
+        {
+          "value": "G6",
+          "text": "凌霄10:00"
+        },
+        {
+          "value": "K6",
+          "text": "可持续发展10:00"
+        },
+        {
+          "value": "K7",
+          "text": "可持续发展9:15"
+        },
+        {
+          "value": "60",
+          "text": "司机不参与考勤"
+        },
+        {
+          "value": "A0",
+          "text": "国内发行10:15"
+        },
+        {
+          "value": "M9",
+          "text": "圆周率10:00"
+        },
+        {
+          "value": "M1",
+          "text": "天智游10:00"
+        },
+        {
+          "value": "M2",
+          "text": "天智游9:15"
+        },
+        {
+          "value": "61",
+          "text": "天智游工作室考勤"
+        },
+        {
+          "value": "11",
+          "text": "客服/综合工时"
+        },
+        {
+          "value": "G4",
+          "text": "幻塔9:30"
+        },
+        {
+          "value": "Y1",
+          "text": "开发运维10:00"
+        },
+        {
+          "value": "C2",
+          "text": "影视10:00"
+        },
+        {
+          "value": "C1",
+          "text": "影视9:30"
+        },
+        {
+          "value": "A3",
+          "text": "技术应用10:00"
+        },
+        {
+          "value": "K5",
+          "text": "控股发展10:30"
+        },
+        {
+          "value": "A9",
+          "text": "新品发行9:30"
+        },
+        {
+          "value": "GA",
+          "text": "新月10:00"
+        },
+        {
+          "value": "M4",
+          "text": "星云10:00"
+        },
+        {
+          "value": "M5",
+          "text": "星云10:30"
+        },
+        {
+          "value": "M3",
+          "text": "未来10:30"
+        },
+        {
+          "value": "A7",
+          "text": "桃花源10:15"
+        },
+        {
+          "value": "A8",
+          "text": "桃花源10:30"
+        },
+        {
+          "value": "A4",
+          "text": "海外发行10:15"
+        },
+        {
+          "value": "H4",
+          "text": "游戏人力10:00"
+        },
+        {
+          "value": "H1",
+          "text": "游戏人力10:30"
+        },
+        {
+          "value": "H2",
+          "text": "游戏人力9:15"
+        },
+        {
+          "value": "H3",
+          "text": "游戏人力9:30"
+        },
+        {
+          "value": "F5",
+          "text": "游戏商务10:00"
+        },
+        {
+          "value": "F2",
+          "text": "游戏并购管理10:00"
+        },
+        {
+          "value": "F1",
+          "text": "游戏并购管理10:15"
+        },
+        {
+          "value": "A1",
+          "text": "游戏法务10:00A"
+        },
+        {
+          "value": "A2",
+          "text": "游戏法务10:00B"
+        },
+        {
+          "value": "F3",
+          "text": "游戏财务10:00A"
+        },
+        {
+          "value": "F4",
+          "text": "游戏财务10:00B"
+        },
+        {
+          "value": "F6",
+          "text": "游戏资源合作10:00"
+        },
+        {
+          "value": "G0",
+          "text": "火星9:00"
+        },
+        {
+          "value": "B2",
+          "text": "用户服务10:00"
+        },
+        {
+          "value": "B1",
+          "text": "用户服务10:30"
+        },
+        {
+          "value": "D1",
+          "text": "电竞9:30"
+        },
+        {
+          "value": "G2",
+          "text": "白海豚9:45"
+        },
+        {
+          "value": "G1",
+          "text": "百万10:00"
+        },
+        {
+          "value": "G5",
+          "text": "矩阵10:30"
+        },
+        {
+          "value": "M7",
+          "text": "硬核10:00"
+        },
+        {
+          "value": "K0",
+          "text": "综合9：00"
+        },
+        {
+          "value": "F8",
+          "text": "综合事业部10:15"
+        },
+        {
+          "value": "K8",
+          "text": "综合管理10:00"
+        },
+        {
+          "value": "Y3",
+          "text": "美术平台10:00"
+        },
+        {
+          "value": "Y2",
+          "text": "美术平台10:30"
+        },
+        {
+          "value": "K3",
+          "text": "行政10:00"
+        },
+        {
+          "value": "K1",
+          "text": "行政9:15"
+        },
+        {
+          "value": "K2",
+          "text": "行政9:30"
+        },
+        {
+          "value": "K4",
+          "text": "证券10:00"
+        },
+        {
+          "value": "F7",
+          "text": "远景10:00"
+        },
+        {
+          "value": "E1",
+          "text": "邮箱10:00A"
+        },
+        {
+          "value": "E2",
+          "text": "邮箱10:00B"
+        },
+        {
+          "value": "FG",
+          "text": "阳明工作室"
+        },
+        {
+          "value": "J3",
+          "text": "集团办公室10:00"
+        },
+        {
+          "value": "J4",
+          "text": "集团办公室10:30"
+        },
+        {
+          "value": "J2",
+          "text": "集团办公室9:30A"
+        },
+        {
+          "value": "J1",
+          "text": "集团办公室9:30B"
+        },
+        {
+          "value": "J7",
+          "text": "集团发展部10:00"
+        },
+        {
+          "value": "J5",
+          "text": "集团发展部9:00"
+        },
+        {
+          "value": "J6",
+          "text": "集团发展部9:30"
+        },
+        {
+          "value": "J8",
+          "text": "集团发展部9:45"
+        },
+        {
+          "value": "K9",
+          "text": "集团财务10:15"
+        },
+        {
+          "value": "G7",
+          "text": "青云10:00"
+        },
+        {
+          "value": "Y4",
+          "text": "项目孵化10:00"
+        },
+        {
+          "value": "Y5",
+          "text": "项目孵化10:30"
+        },
+        {
+          "value": "G9",
+          "text": "顺为10:00"
+        },
+        {
+          "value": "G3",
+          "text": "黑羽9:30"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SUPV_LVL_ID",
+      "label": "*审批级别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "D1",
+          "text": "董事长"
+        },
+        {
+          "value": "E3",
+          "text": "CEO"
+        },
+        {
+          "value": "E1",
+          "text": "SVP"
+        },
+        {
+          "value": "001",
+          "text": "副总裁"
+        },
+        {
+          "value": "004",
+          "text": "总监"
+        },
+        {
+          "value": "007",
+          "text": "经理"
+        },
+        {
+          "value": "009",
+          "text": "员工"
+        },
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_PROBA_SALAR",
+      "label": "*试用期工资:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_CON_SALARY",
+      "label": "*转正工资:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_MEAL_SUP",
+      "label": "餐补:",
+      "type": "select-one",
+      "group": "薪资信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "04",
+          "text": "200"
+        },
+        {
+          "value": "00",
+          "text": "300"
+        },
+        {
+          "value": "05",
+          "text": "350"
+        },
+        {
+          "value": "01",
+          "text": "400"
+        },
+        {
+          "value": "02",
+          "text": "450"
+        },
+        {
+          "value": "03",
+          "text": "无"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_MOVE_SUBSIDY",
+      "label": "搬家费:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_ANN_BON",
+      "label": "约定年终奖月数:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "如需填写请与薪酬负责人沟通",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SINO_ER_HOUSE_ALW",
+      "label": "住房补贴/月:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_ANNUAL_SALARY",
+      "label": "TTC:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "C_PRECMP_SALARY_SINO_AC_ANNBOBUS_T",
+      "label": "Offer年薪:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_HIR_SBON_TBL_PW_SIGNBONUS_FLG",
+      "label": "是否有签约金",
+      "type": "checkbox",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PW_STOCK_FLAG",
+      "label": "长期激励",
+      "type": "checkbox",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_PW_BGCHECK_TYPE",
+      "label": "*背调类型:",
+      "type": "select-one",
+      "group": "背景调查",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_PW_BGCHECK_TM",
+      "label": "*背调时间:",
+      "type": "select-one",
+      "group": "背景调查",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "M",
+          "text": "Offer邮件发送后发起"
+        },
+        {
+          "value": "O",
+          "text": "与Offer流程同步发起"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_PW_BGC_MEAL_NAME",
+      "label": "套餐名称:",
+      "type": "text",
+      "group": "背景调查",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_EMAIL_CC",
+      "label": "报告抄送邮箱:",
+      "type": "text",
+      "group": "背景调查",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_PW_REMARK",
+      "label": "重点调查:",
+      "type": "textarea",
+      "group": "背景调查",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_HIR_BGC_TBL_SEND_FLAG",
+      "label": "提供简历进行比对",
+      "type": "checkbox",
+      "group": "背景调查",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    }
+  ],
+  "intern": [
+    {
+      "id": "IS_WFL_HIR_HDR_NAME",
+      "label": "*姓名:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SEX",
+      "label": "*性别:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "F",
+          "text": "女"
+        },
+        {
+          "value": "U",
+          "text": "未知"
+        },
+        {
+          "value": "M",
+          "text": "男"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_ENTRY_TIME",
+      "label": "*计划到岗时间:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EMAILID",
+      "label": "*电子邮件:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_NID_SPECIAL_CHAR",
+      "label": "*证件号码:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_MOBILE_PHONE",
+      "label": "*电话号码:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_HIGHEST_EDUC_LVL",
+      "label": "*最高教育程度:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "L",
+          "text": "博士后"
+        },
+        {
+          "value": "J",
+          "text": "博士研究生"
+        },
+        {
+          "value": "I",
+          "text": "硕士研究生"
+        },
+        {
+          "value": "G",
+          "text": "大学本科"
+        },
+        {
+          "value": "D",
+          "text": "大学专科"
+        },
+        {
+          "value": "N",
+          "text": "大学肄业"
+        },
+        {
+          "value": "M",
+          "text": "中专"
+        },
+        {
+          "value": "E",
+          "text": "技校"
+        },
+        {
+          "value": "T",
+          "text": "职业高中"
+        },
+        {
+          "value": "C",
+          "text": "高中"
+        },
+        {
+          "value": "B",
+          "text": "高中以下"
+        },
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_EDU_PASS",
+      "label": "*是否符合学历要求:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "N",
+          "text": "不符合"
+        },
+        {
+          "value": "Y",
+          "text": "符合"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SCHOOL_GRAD",
+      "label": "*最高学历院校类型:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "B",
+          "text": "985&211"
+        },
+        {
+          "value": "A",
+          "text": "C9院校"
+        },
+        {
+          "value": "D",
+          "text": "QS200海外院校"
+        },
+        {
+          "value": "E",
+          "text": "八大美院"
+        },
+        {
+          "value": "C",
+          "text": "其他"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SCHOOL_NAME",
+      "label": "*最高学历毕业院校:",
+      "type": "text",
+      "group": "候选人基本信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "C_PRECMP_SALARY_YEARCD",
+      "label": "*毕业年份:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "2025",
+          "text": "2025"
+        },
+        {
+          "value": "2026",
+          "text": "2026"
+        },
+        {
+          "value": "2027",
+          "text": "2027"
+        },
+        {
+          "value": "2028",
+          "text": "2028"
+        },
+        {
+          "value": "2029",
+          "text": "2029"
+        },
+        {
+          "value": "2030",
+          "text": "2030"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_HIRE_WAY",
+      "label": "*招聘渠道:",
+      "type": "select-one",
+      "group": "候选人基本信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "24",
+          "text": "RPO"
+        },
+        {
+          "value": "99",
+          "text": "人才库"
+        },
+        {
+          "value": "04",
+          "text": "关系户"
+        },
+        {
+          "value": "21",
+          "text": "其他"
+        },
+        {
+          "value": "03",
+          "text": "内部推荐"
+        },
+        {
+          "value": "18",
+          "text": "团队入职"
+        },
+        {
+          "value": "05",
+          "text": "外部推荐/人脉"
+        },
+        {
+          "value": "25",
+          "text": "招聘会/宣讲会"
+        },
+        {
+          "value": "06",
+          "text": "招聘官网"
+        },
+        {
+          "value": "14",
+          "text": "猎头"
+        },
+        {
+          "value": "09",
+          "text": "网络渠道-BOSS直聘"
+        },
+        {
+          "value": "08",
+          "text": "网络渠道-前程无忧"
+        },
+        {
+          "value": "17",
+          "text": "网络渠道-实习僧"
+        },
+        {
+          "value": "12",
+          "text": "网络渠道-拉勾网"
+        },
+        {
+          "value": "07",
+          "text": "网络渠道-智联"
+        },
+        {
+          "value": "13",
+          "text": "网络渠道-猎聘网"
+        },
+        {
+          "value": "15",
+          "text": "网络渠道-脉脉"
+        },
+        {
+          "value": "19",
+          "text": "网络渠道-领英"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "LS_ORGNODE_TBL_DESCR",
+      "label": "*直属部门:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "BUS_UNIT_TBL_HR_DESCR",
+      "label": "*业务单位:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "PW_ORGTREE_LINE_DESCR254",
+      "label": "各级部门:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_LOCATION_SALARY",
+      "label": "*Base城市:",
+      "type": "select-one",
+      "group": "组织架构信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "EU",
+          "text": "EU"
+        },
+        {
+          "value": "BV",
+          "text": "Perfect World Europe B.V."
+        },
+        {
+          "value": "SH",
+          "text": "上海"
+        },
+        {
+          "value": "OTH",
+          "text": "其他"
+        },
+        {
+          "value": "BJ",
+          "text": "北京"
+        },
+        {
+          "value": "NA",
+          "text": "北美"
+        },
+        {
+          "value": "TW",
+          "text": "台湾"
+        },
+        {
+          "value": "HF",
+          "text": "合肥"
+        },
+        {
+          "value": "TJ",
+          "text": "天津"
+        },
+        {
+          "value": "GZ",
+          "text": "广州"
+        },
+        {
+          "value": "DQ",
+          "text": "德清"
+        },
+        {
+          "value": "CD",
+          "text": "成都"
+        },
+        {
+          "value": "SGP",
+          "text": "新加坡"
+        },
+        {
+          "value": "XJ",
+          "text": "新疆"
+        },
+        {
+          "value": "JP",
+          "text": "日本"
+        },
+        {
+          "value": "HZ",
+          "text": "杭州"
+        },
+        {
+          "value": "WH",
+          "text": "武汉"
+        },
+        {
+          "value": "HB",
+          "text": "河北"
+        },
+        {
+          "value": "THA",
+          "text": "泰国"
+        },
+        {
+          "value": "HN",
+          "text": "海南"
+        },
+        {
+          "value": "SZ",
+          "text": "深圳"
+        },
+        {
+          "value": "FZ",
+          "text": "福州"
+        },
+        {
+          "value": "SZH",
+          "text": "苏州"
+        },
+        {
+          "value": "CQ",
+          "text": "重庆"
+        },
+        {
+          "value": "CHCH",
+          "text": "长春"
+        },
+        {
+          "value": "KOR",
+          "text": "韩国"
+        },
+        {
+          "value": "HKG",
+          "text": "香港"
+        },
+        {
+          "value": "MYS",
+          "text": "马来西亚"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "COMPANY_TBL_DESCR",
+      "label": "*合同签署公司:",
+      "type": "text",
+      "group": "组织架构信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_ADDRESS",
+      "label": "*办公地点:",
+      "type": "select-one",
+      "group": "组织架构信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "ABJ",
+          "text": "ABJ-北京"
+        },
+        {
+          "value": "ABJ1",
+          "text": "ABJ1-望京完美世界大厦"
+        },
+        {
+          "value": "ACD",
+          "text": "ACD-成都"
+        },
+        {
+          "value": "ACD1",
+          "text": "ACD1-天府软件园"
+        },
+        {
+          "value": "AGZ",
+          "text": "AGZ-广州"
+        },
+        {
+          "value": "AHF1",
+          "text": "AHF1-动漫产业基地"
+        },
+        {
+          "value": "AHK",
+          "text": "AHK-香港"
+        },
+        {
+          "value": "ASH",
+          "text": "ASH-上海"
+        },
+        {
+          "value": "ASH1",
+          "text": "ASH1-浦东陆家嘴软件园"
+        },
+        {
+          "value": "ATW",
+          "text": "ATW-台湾"
+        },
+        {
+          "value": "ATW1",
+          "text": "ATW1-江北市远东世纪广场"
+        },
+        {
+          "value": "B",
+          "text": "B-美国"
+        },
+        {
+          "value": "BJZ",
+          "text": "BJZ-加州 Redwood City"
+        },
+        {
+          "value": "BJZ1",
+          "text": "BJZ1-Redwood shoresPKEYSte.400"
+        },
+        {
+          "value": "BJZ2",
+          "text": "BJZ2-Los Gatos, CA"
+        },
+        {
+          "value": "BJZ3",
+          "text": "BJZ3-Santa Clara, CA"
+        },
+        {
+          "value": "BJZ4",
+          "text": "BJZ4-San Francisco"
+        },
+        {
+          "value": "BJZ5",
+          "text": "BJZ5-Los Gatos"
+        },
+        {
+          "value": "C",
+          "text": "C-荷兰"
+        },
+        {
+          "value": "CAM",
+          "text": "CAM-阿姆斯特丹"
+        },
+        {
+          "value": "CQ",
+          "text": "CQ-重庆"
+        },
+        {
+          "value": "D",
+          "text": "D-日本"
+        },
+        {
+          "value": "E",
+          "text": "E-韩国"
+        },
+        {
+          "value": "G",
+          "text": "G-泰国"
+        },
+        {
+          "value": "GCT",
+          "text": "GCT-CyberWorld Tower"
+        },
+        {
+          "value": "99",
+          "text": "H-其他"
+        },
+        {
+          "value": "TJ",
+          "text": "TJ-天津"
+        },
+        {
+          "value": "SH",
+          "text": "上海宝武大厦"
+        },
+        {
+          "value": "NC",
+          "text": "南昌"
+        },
+        {
+          "value": "SHZH",
+          "text": "深圳"
+        },
+        {
+          "value": "SZ",
+          "text": "苏州"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PW_HC_DEPT_DESCR",
+      "label": "HC编制部门:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_RECRUIT_CASE",
+      "label": "*新增/替换HC:",
+      "type": "select-one",
+      "group": "编制信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "01",
+          "text": "新增"
+        },
+        {
+          "value": "03",
+          "text": "替换"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "PW_HC_TYPE_VW_DESCR",
+      "label": "HC编制类别:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "PERSON_NAME_NAME$236$",
+      "label": "替换人员:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_TERMINATION_DT",
+      "label": "替换人员离职日期:",
+      "type": "text",
+      "group": "编制信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SUPERVISOR_ID",
+      "label": "直属上级:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "PERSON_NAME_NAME$95$",
+      "label": "直属上级姓名:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EMPL_CLASS",
+      "label": "*员工类别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "INT",
+          "text": "实习生"
+        }
+      ],
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG1",
+      "label": "*角色类别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "0",
+          "text": "0-实习生"
+        }
+      ],
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG3",
+      "label": "*职业路径:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_Z_JOBCODE_SEG2",
+      "label": "*职务族群:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "F",
+          "text": "业务管理类"
+        },
+        {
+          "value": "8",
+          "text": "产品群"
+        },
+        {
+          "value": "H",
+          "text": "公司高管类"
+        },
+        {
+          "value": "7",
+          "text": "商务市场与品牌群"
+        },
+        {
+          "value": "I",
+          "text": "影视类"
+        },
+        {
+          "value": "2",
+          "text": "战略投资群"
+        },
+        {
+          "value": "6",
+          "text": "技术群"
+        },
+        {
+          "value": "5",
+          "text": "服务群"
+        },
+        {
+          "value": "X",
+          "text": "桃花源"
+        },
+        {
+          "value": "3",
+          "text": "综合管理群"
+        },
+        {
+          "value": "1",
+          "text": "设计群"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_EEO_JOB_GROUP",
+      "label": "*序列:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_POSITION_IN",
+      "label": "*职务:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "GP_PYGRP_DESCR",
+      "label": "*薪资组:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "请选择",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_POSITION_OUT",
+      "label": "*业务头衔:",
+      "type": "text",
+      "group": "职务信息",
+      "options": null,
+      "placeholder": "Offer及合同中显示",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_KAOQIN_TYPE",
+      "label": "*考勤类型:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "17",
+          "text": "08综合09:15算迟到"
+        },
+        {
+          "value": "19",
+          "text": "10上海09:15算迟到"
+        },
+        {
+          "value": "22",
+          "text": "12成都美术09:30算迟到"
+        },
+        {
+          "value": "12",
+          "text": "不参与考勤"
+        },
+        {
+          "value": "NT",
+          "text": "中晚班弹性"
+        },
+        {
+          "value": "M6",
+          "text": "以太9:30"
+        },
+        {
+          "value": "A5",
+          "text": "全球研运10:15"
+        },
+        {
+          "value": "A6",
+          "text": "全球研运9:30"
+        },
+        {
+          "value": "G6",
+          "text": "凌霄10:00"
+        },
+        {
+          "value": "K6",
+          "text": "可持续发展10:00"
+        },
+        {
+          "value": "K7",
+          "text": "可持续发展9:15"
+        },
+        {
+          "value": "60",
+          "text": "司机不参与考勤"
+        },
+        {
+          "value": "A0",
+          "text": "国内发行10:15"
+        },
+        {
+          "value": "M9",
+          "text": "圆周率10:00"
+        },
+        {
+          "value": "M1",
+          "text": "天智游10:00"
+        },
+        {
+          "value": "M2",
+          "text": "天智游9:15"
+        },
+        {
+          "value": "61",
+          "text": "天智游工作室考勤"
+        },
+        {
+          "value": "11",
+          "text": "客服/综合工时"
+        },
+        {
+          "value": "G4",
+          "text": "幻塔9:30"
+        },
+        {
+          "value": "Y1",
+          "text": "开发运维10:00"
+        },
+        {
+          "value": "C2",
+          "text": "影视10:00"
+        },
+        {
+          "value": "C1",
+          "text": "影视9:30"
+        },
+        {
+          "value": "A3",
+          "text": "技术应用10:00"
+        },
+        {
+          "value": "K5",
+          "text": "控股发展10:30"
+        },
+        {
+          "value": "A9",
+          "text": "新品发行9:30"
+        },
+        {
+          "value": "GA",
+          "text": "新月10:00"
+        },
+        {
+          "value": "M4",
+          "text": "星云10:00"
+        },
+        {
+          "value": "M5",
+          "text": "星云10:30"
+        },
+        {
+          "value": "M3",
+          "text": "未来10:30"
+        },
+        {
+          "value": "A7",
+          "text": "桃花源10:15"
+        },
+        {
+          "value": "A8",
+          "text": "桃花源10:30"
+        },
+        {
+          "value": "A4",
+          "text": "海外发行10:15"
+        },
+        {
+          "value": "H4",
+          "text": "游戏人力10:00"
+        },
+        {
+          "value": "H1",
+          "text": "游戏人力10:30"
+        },
+        {
+          "value": "H2",
+          "text": "游戏人力9:15"
+        },
+        {
+          "value": "H3",
+          "text": "游戏人力9:30"
+        },
+        {
+          "value": "F5",
+          "text": "游戏商务10:00"
+        },
+        {
+          "value": "F2",
+          "text": "游戏并购管理10:00"
+        },
+        {
+          "value": "F1",
+          "text": "游戏并购管理10:15"
+        },
+        {
+          "value": "A1",
+          "text": "游戏法务10:00A"
+        },
+        {
+          "value": "A2",
+          "text": "游戏法务10:00B"
+        },
+        {
+          "value": "F3",
+          "text": "游戏财务10:00A"
+        },
+        {
+          "value": "F4",
+          "text": "游戏财务10:00B"
+        },
+        {
+          "value": "F6",
+          "text": "游戏资源合作10:00"
+        },
+        {
+          "value": "G0",
+          "text": "火星9:00"
+        },
+        {
+          "value": "B2",
+          "text": "用户服务10:00"
+        },
+        {
+          "value": "B1",
+          "text": "用户服务10:30"
+        },
+        {
+          "value": "D1",
+          "text": "电竞9:30"
+        },
+        {
+          "value": "G2",
+          "text": "白海豚9:45"
+        },
+        {
+          "value": "G1",
+          "text": "百万10:00"
+        },
+        {
+          "value": "G5",
+          "text": "矩阵10:30"
+        },
+        {
+          "value": "M7",
+          "text": "硬核10:00"
+        },
+        {
+          "value": "K0",
+          "text": "综合9：00"
+        },
+        {
+          "value": "F8",
+          "text": "综合事业部10:15"
+        },
+        {
+          "value": "K8",
+          "text": "综合管理10:00"
+        },
+        {
+          "value": "Y3",
+          "text": "美术平台10:00"
+        },
+        {
+          "value": "Y2",
+          "text": "美术平台10:30"
+        },
+        {
+          "value": "K3",
+          "text": "行政10:00"
+        },
+        {
+          "value": "K1",
+          "text": "行政9:15"
+        },
+        {
+          "value": "K2",
+          "text": "行政9:30"
+        },
+        {
+          "value": "K4",
+          "text": "证券10:00"
+        },
+        {
+          "value": "F7",
+          "text": "远景10:00"
+        },
+        {
+          "value": "E1",
+          "text": "邮箱10:00A"
+        },
+        {
+          "value": "E2",
+          "text": "邮箱10:00B"
+        },
+        {
+          "value": "FG",
+          "text": "阳明工作室"
+        },
+        {
+          "value": "J3",
+          "text": "集团办公室10:00"
+        },
+        {
+          "value": "J4",
+          "text": "集团办公室10:30"
+        },
+        {
+          "value": "J2",
+          "text": "集团办公室9:30A"
+        },
+        {
+          "value": "J1",
+          "text": "集团办公室9:30B"
+        },
+        {
+          "value": "J7",
+          "text": "集团发展部10:00"
+        },
+        {
+          "value": "J5",
+          "text": "集团发展部9:00"
+        },
+        {
+          "value": "J6",
+          "text": "集团发展部9:30"
+        },
+        {
+          "value": "J8",
+          "text": "集团发展部9:45"
+        },
+        {
+          "value": "K9",
+          "text": "集团财务10:15"
+        },
+        {
+          "value": "G7",
+          "text": "青云10:00"
+        },
+        {
+          "value": "Y4",
+          "text": "项目孵化10:00"
+        },
+        {
+          "value": "Y5",
+          "text": "项目孵化10:30"
+        },
+        {
+          "value": "G9",
+          "text": "顺为10:00"
+        },
+        {
+          "value": "G3",
+          "text": "黑羽9:30"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_SUPV_LVL_ID",
+      "label": "*审批级别:",
+      "type": "select-one",
+      "group": "职务信息",
+      "options": [
+        {
+          "value": "009",
+          "text": "员工"
+        }
+      ],
+      "placeholder": "",
+      "disabled": true
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_IS_PRACTICE_SALARY",
+      "label": "*实习工资:",
+      "type": "text",
+      "group": "薪资信息",
+      "options": null,
+      "placeholder": "",
+      "disabled": false
+    },
+    {
+      "id": "IS_WFL_HIR_HDR_PWRD_MEAL_SUP",
+      "label": "餐补:",
+      "type": "select-one",
+      "group": "薪资信息",
+      "options": [
+        {
+          "value": "",
+          "text": " "
+        },
+        {
+          "value": "04",
+          "text": "200"
+        },
+        {
+          "value": "00",
+          "text": "300"
+        },
+        {
+          "value": "05",
+          "text": "350"
+        },
+        {
+          "value": "01",
+          "text": "400"
+        },
+        {
+          "value": "02",
+          "text": "450"
+        },
+        {
+          "value": "03",
+          "text": "无"
+        }
+      ],
+      "placeholder": "",
+      "disabled": false
+    }
+  ]
+};
+
+</script><script>
+// 示例记录仅用于本地交互，不含参考系统中的候选人身份和联系方式。
+function retainOneOfferPerStatus(records) {
+ const seenStatuses = new Set();
+ return records.filter(record => {
+  const status = String(record.status ?? '').trim();
+  if (String(record.job ?? '').trim() === '实习生' || seenStatuses.has(status)) return false;
+  seenStatuses.add(status);
+  return true;
+ });
+}
+window.OFFER_DEMO = (() => {
+ const statuses=['审批完成','已保存','已保存','个人信息已提交','已接受Offer','已提交','正在处理审批','offer已发送','信息已审核','已报到','Reject Off','审批不通过'];
+ const departments=['游戏研发中心/技术开发部','全球研运支持中心/流程与资源管理部','人力资源中心/HR产品部','游戏研发中心/美术部','职能管理平台/财务部','游戏研发中心/策划部'];
+ const jobs=['开发工程师','运维工程师','产品经理','美术设计师','财务会计师','游戏策划'];
+ return retainOneOfferPerStatus(Array.from({length:36},(_,i)=>{const j=i%12,status=statuses[j],type=i%5===0?'intern':i%5===1?'campus':'social';return {
+ id:String(900001+i),name:`示例候选人${String(i+1).padStart(2,'0')}`,department:departments[i%6],job:type==='intern'?'实习生':jobs[i%6],entry:`2026-${i<12?'11':'12'}-${String(10+i%18).padStart(2,'0')}`,submitted:'2026-11-05',operator:['已提交','正在处理审批'].includes(status)?'示例审批人':'',status,type,
+ background:type!=='intern',bgStage:['未开始','待候选人授权','已完成','无需背调'][i%4],bgType:['基础背调','标准背调(2段经历)','深度背调(3段经历)','无需背调/已线下背调'][i%4],signal:i===7?'黄灯':i%7===3?'红灯':i%5===4?'橙灯':i%4===2?'绿灯':'',
+ fields:{IS_WFL_HIR_HDR_NAME:`示例候选人${String(i+1).padStart(2,'0')}`,IS_WFL_HIR_HDR_SEX:'U',IS_WFL_HIR_HDR_IS_ENTRY_TIME:`2026-${i<12?'11':'12'}-${String(10+i%18).padStart(2,'0')}`,IS_WFL_HIR_HDR_EMAILID:`candidate${i+1}@example.com`,IS_WFL_HIR_HDR_NID_SPECIAL_CHAR:'DEMO-ID-'+String(i+1).padStart(4,'0'),IS_WFL_HIR_HDR_MOBILE_PHONE:'13800000000',IS_WFL_HIR_HDR_HIGHEST_EDUC_LVL:'G',IS_WFL_HIR_HDR_IS_EDU_PASS:'Y',IS_WFL_HIR_HDR_IS_HIRE_WAY:'06',LS_ORGNODE_TBL_DESCR:departments[i%6].split('/').at(-1),PW_ORGTREE_LINE_DESCR254:departments[i%6],BUS_UNIT_TBL_HR_DESCR:'示例业务单位',COMPANY_TBL_DESCR:'示例合同公司',IS_WFL_HIR_HDR_IS_LOCATION_SALARY:'BJ',IS_WFL_HIR_HDR_PWRD_ADDRESS:'ABJ1',IS_WFL_HIR_HDR_IS_RECRUIT_CASE:'01',IS_WFL_HIR_HDR_EMPL_CLASS:type==='intern'?'INT':'007',IS_WFL_HIR_HDR_IS_PROBATION_PERIO:'02',PERSON_NAME_NAME$93$:'示例主管',IS_WFL_HIR_HDR_Z_JOBCODE_SEG1:type==='intern'?'0':'9',IS_WFL_HIR_HDR_Z_JOBCODE_SEG2:'6',IS_WFL_HIR_HDR_Z_JOBCODE_SEG3:'专业发展',IS_WFL_HIR_HDR_EEO_JOB_GROUP:'技术研发',SAL_GRADE_TBL_DESCR:'P3',IS_WFL_HIR_HDR_IS_POSITION_IN:jobs[i%6],IS_WFL_HIR_HDR_IS_POSITION_OUT:jobs[i%6],GP_PYGRP_DESCR:'示例薪资组',IS_WFL_HIR_HDR_PWRD_KAOQIN_TYPE:'G7',IS_WFL_HIR_HDR_SUPV_LVL_ID:'009',IS_WFL_HIR_HDR_IS_PROBA_SALAR:'18000',IS_WFL_HIR_HDR_IS_CON_SALARY:'20000',IS_WFL_HIR_HDR_IS_PRACTICE_SALARY:'200',IS_WFL_HIR_HDR_PWRD_MEAL_SUP:'01',IS_WFL_HIR_HDR_IS_ANN_BON:'0',IS_HIR_BGC_TBL_PW_BGCHECK_TYPE:['基础背调','标准背调(2段经历)','深度背调(3段经历)','无需背调/已线下背调'][i%4],IS_HIR_BGC_TBL_PW_BGCHECK_TM:'M',IS_HIR_BGC_TBL_PW_BGC_MEAL_NAME:'示例背调套餐'},
+ attachments:{简历:{name:'示例简历.pdf',demo:true},薪资证明:{name:'示例薪资证明.pdf',demo:true}},comments:'示例数据：用于核对页面及流程交互。',history:[{action:status,at:'2026-11-05 10:00',actor:'示例HR',note:'初始化示例记录'}],interviews:[{date:'2026-11-02',type:'专业面试',interviewer:'示例面试官',result:'通过',notes:'示例面试记录'}]
+ };}));
+})();
+
+</script><script>
+(() => {
+'use strict';
+const $=id=>document.getElementById(id), esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clone=v=>JSON.parse(JSON.stringify(v)), key='special-offer-flow-v1',listRevision=1, tabs=['待操作','背调管理','On Going','已完成','全部'];
+const F={name:'IS_WFL_HIR_HDR_NAME',entry:'IS_WFL_HIR_HDR_IS_ENTRY_TIME',email:'IS_WFL_HIR_HDR_EMAILID',channel:'IS_WFL_HIR_HDR_IS_HIRE_WAY',dept:'LS_ORGNODE_TBL_DESCR',job:'IS_WFL_HIR_HDR_IS_POSITION_IN',salary:'IS_WFL_HIR_HDR_IS_CON_SALARY',bonus:'IS_HIR_SBON_TBL_PW_SIGNBONUS_FLG',stock:'IS_WFL_HIR_HDR_PW_STOCK_FLAG',bg:'IS_HIR_BGC_TBL_PW_BGCHECK_TYPE'};
+let rows=clone(window.OFFER_DEMO),tab=0,page=0,pageSize=12,query='',findQuery='',sortKey='',sortAsc=true,hiddenCols={},draft=null,editorBaseline=null,editable=false,editorTab='approval',actionHandler=null,toastTimer;
+try {
+ const storedValue = localStorage.getItem(key);
+ const saved = JSON.parse(storedValue);
+ if (saved?.version === 1 && Array.isArray(saved.rows)) {
+  rows = saved.rows;
+  if ((saved.listRevision || 0) < listRevision) {
+   const retainedRows = retainOneOfferPerStatus(rows);
+   if (retainedRows.length !== rows.length) {
+    const backupKey = key + '-before-list-cleanup-20261111';
+    if (localStorage.getItem(backupKey) === null) localStorage.setItem(backupKey, storedValue);
+   }
+   localStorage.setItem(key, JSON.stringify({...saved, rows: retainedRows, listRevision}));
+   rows = retainedRows;
+  }
+ }
+} catch { toast('列表整理未完成，原始数据已保留，请检查浏览器存储空间后刷新重试。'); }
+function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,3500);}
+function persist(){try{localStorage.setItem(key,JSON.stringify({version:1,rows,listRevision}));return true;}catch{toast('浏览器存储空间不足，本次修改尚未保存。请先导出所需信息。');return false;}}
+function history(r,action,note=''){r.history??=[];r.history.push({action,note,actor:'本地HR',at:new Date().toLocaleString('zh-CN',{hour12:false})});}
+function mutate(id,action,fn){const before=clone(rows);const r=rows.find(x=>x.id===id);fn(r);history(r,action);if(!persist()){rows=before;return false;}renderList();toast(action+'（本地演示）');return true;}
+const allMenus=['员工档案','新员工登陆计划','试用期管理','员工发展','Offer管理','特殊offer流程','实习生管理','转正管理','调动管理','批量调动','劳动合同换签','职务数据变更','离职管理','离职协议','离职预查询','调薪管理','员工借款记录查询','员工档案权限管理','待入职','组织架构图','流程信息列表','登记照审核','HC 预算查询'];
+$('sidebar').innerHTML=['签约管理','员工自助','经理自助','流程审批','HRG自助','外包管理','SSC','HRIS系统管理','签约金管理','绩效系统'].map(g=>`<details class="nav-group" ${g==='HRG自助'?'open':''}><summary>${g}</summary><div class="nav-items">${g==='HRG自助'?allMenus.map(n=>n==='特殊offer流程'?'<a href="#pending" class="selected" aria-current="page">特殊offer流程</a>':`<span>${n}</span>`).join(''):'<span class="muted">'+g+'</span>'}</div></details>`).join('');
+$('sidebar').querySelector('a').onclick=e=>{e.preventDefault();setTab(0);};
+const columns=[
+ [['id','流程号'],['department','部门'],['job','招聘职位'],['name','姓名'],['entry','计划入职时间'],['submitted','提交时间'],['operator','当前操作人'],['status','审批单状态'],['next','下一步操作'],['reject','Reject'],['adjust','调整报到时间'],['detail','详细']],
+ [['id','流程编号'],['department','直属部门'],['job','招聘职位'],['name','姓名'],['entry','计划到岗时间'],['submitted','提交时间'],['bgStage','当前环节'],['signal','结果异常'],['bgType','背调类型'],['bgNext','下一步操作'],['detail','详细']],
+ [['id','流程编号'],['department','部门'],['job','招聘职位'],['name','姓名'],['entry','计划入职时间'],['operator','上轮审批人'],['status','审批单状态'],['detail','详细']],
+ [['id','流程编号'],['department','部门'],['job','招聘职位'],['name','姓名'],['entry','计划入职时间'],['status','审批单状态'],['detail','详细']],
+ [['id','流程编号'],['department','部门'],['job','招聘职位'],['name','姓名'],['entry','计划入职时间'],['submitted','提交时间'],['operator','当前操作人'],['status','审批单状态'],['detail','详细'],['send','发送OFFER']]
+];
+const finished=['已报到','Reject Off','审批不通过','流程关闭'];
+function filtered(){let list=rows.filter(r=>tab===0?['审批完成','已保存','个人信息已提交','已接受Offer'].includes(r.status):tab===1?r.background:tab===2?!finished.includes(r.status)&&r.status!=='已保存':tab===3?finished.includes(r.status):true);if(query)list=list.filter(r=>r.name.toLowerCase().includes(query.toLowerCase()));if(findQuery)list=list.filter(r=>Object.values(r).filter(v=>typeof v==='string').join(' ').toLowerCase().includes(findQuery.toLowerCase()));if(sortKey)list.sort((a,b)=>String(a[sortKey]??'').localeCompare(String(b[sortKey]??''),'zh-CN',{numeric:true})*(sortAsc?1:-1));return list;}
+function link(action,text,id){return `<button type="button" class="link" data-row-action="${action}" data-id="${id}">${esc(text)}</button>`;}
+function risk(r){return r.signal?`<button class="link" data-row-action="risk" data-id="${r.id}"><span class="signal ${r.signal==='红灯'?'red':r.signal==='橙灯'||r.signal==='黄灯'?'orange':'green'}">${esc(r.signal)}</span></button>`:'';}
+function cell(r,k){switch(k){case 'next':return (r.status==='已保存'?link('close','流程关闭',r.id)+link('resubmit','重新提交',r.id):r.status==='审批完成'?link('send','发送OFFER通知',r.id):r.status==='个人信息已提交'?link('confirm','确认入职信息',r.id):'')+risk(r);case 'reject':return link('reject','Reject',r.id);case 'adjust':return link('adjust',r.entry||'设置时间',r.id);case 'detail':return link('detail','详细',r.id);case 'send':return r.status==='审批完成'?link('send','发送OFFER',r.id):'<span class="muted">发送OFFER</span>';case 'bgNext':return r.bgStage==='已完成'?link('report','报告下载',r.id):(r.bgStage==='待候选人授权'?'':link('authorize','发送授权邮件',r.id))+link('bgType','修改背调类型',r.id);case 'signal':return risk(r);case 'department':return esc(tab===1?r.department.split('/').at(-1):r.department);default:return esc(r[k]??'');}}
+function setTab(n){tab=n;page=0;query='';findQuery='';sortKey='';$('name-query').value='';renderList();}
+function renderList(){
+ $('tabs').innerHTML=tabs.map((t,i)=>`<button id="tab-${i}" role="tab" aria-selected="${i===tab}" aria-controls="table-wrap" data-tab="${i}">${t}</button>`).join('');
+ $('bottom-tabs').innerHTML=tabs.map((t,i)=>`<button class="${i===tab?'active':''}" data-tab="${i}">${t}</button>`).join('');
+ $('list-title').textContent=tabs[tab];$('add-candidate').hidden=tab!==0;$('search-form').hidden=![1,2,3].includes(tab);
+ const list=filtered(),last=Math.max(0,Math.ceil(list.length/pageSize)-1);page=Math.max(0,Math.min(page,last));const shown=list.slice(page*pageSize,(page+1)*pageSize),cols=columns[tab].filter(([k])=>!hiddenCols[tab]?.includes(k));
+ $('offer-table').querySelector('thead').innerHTML='<tr>'+cols.map(([k,t])=>`<th><button data-sort="${k}">${t}${sortKey===k?(sortAsc?' ↑':' ↓'):''}</button></th>`).join('')+'</tr>';
+ $('offer-table').querySelector('tbody').innerHTML=shown.length?shown.map(r=>'<tr>'+cols.map(([k])=>`<td class="${k==='department'?'department':['next','bgNext'].includes(k)?'row-actions':['id','entry','submitted','adjust'].includes(k)?'nowrap':''}">${cell(r,k)}</td>`).join('')+'</tr>').join(''):`<tr><td class="empty" colspan="${cols.length}">没有符合条件的记录</td></tr>`;
+ $('result-count').textContent=(query||findQuery)?`搜索结果：${list.length} 条`:'';
+ $('page-select').innerHTML=Array.from({length:last+1},(_,i)=>`<option value="${i}" ${i===page?'selected':''}>${list.length?i*pageSize+1:0}-${Math.min((i+1)*pageSize,list.length)}/${list.length}</option>`).join('');
+ document.querySelectorAll('[data-page]').forEach(e=>e.disabled=['first','prev'].includes(e.dataset.page)?page===0:page>=last);
+}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-tab]');if(t)setTab(+t.dataset.tab);const s=e.target.closest('[data-sort]');if(s){if(['next','bgNext','detail','send','reject','adjust'].includes(s.dataset.sort))return;sortAsc=sortKey===s.dataset.sort?!sortAsc:true;sortKey=s.dataset.sort;renderList();}const a=e.target.closest('[data-row-action]');if(a)rowAction(a.dataset.rowAction,a.dataset.id);const p=e.target.closest('[data-page]');if(p){const last=Math.max(0,Math.ceil(filtered().length/pageSize)-1);page=p.dataset.page==='first'?0:p.dataset.page==='last'?last:page+(p.dataset.page==='next'?1:-1);renderList();}});
+$('search-form').onsubmit=e=>{e.preventDefault();query=$('name-query').value.trim();page=0;renderList();};$('page-select').onchange=e=>{page=+e.target.value;renderList();};
+$('grid-menu-button').onclick=()=>$('grid-menu').hidden=!$('grid-menu').hidden;$('zoom-button').onclick=()=>document.querySelector('.workspace').classList.toggle('expanded');
+$('all-rows-button').onclick=()=>{pageSize=pageSize===12?10000:12;page=0;$('all-rows-button').textContent=pageSize===12?'查看全部行':'每页12行';$('grid-menu').hidden=true;renderList();};
+$('find-button').onclick=()=>dialog('查找列表',`<label>查找内容<input name="term" value="${esc(findQuery)}" autofocus></label><p class="muted">查找流程号、姓名、部门、职位或状态。留空可恢复列表。</p>`,fd=>{findQuery=fd.get('term').trim();page=0;renderList();return true;});
+$('columns-button').onclick=()=>{$('grid-menu').hidden=true;dialog('显示 / 隐藏列',columns[tab].map(([k,t])=>`<label><input type="checkbox" name="col" value="${k}" ${hiddenCols[tab]?.includes(k)?'':'checked'}> ${t}</label>`).join(''),fd=>{const selected=fd.getAll('col');if(!selected.length)return '至少保留一列';hiddenCols[tab]=columns[tab].map(x=>x[0]).filter(k=>!selected.includes(k));renderList();return true;});};
+function download(content,name,type='text/plain;charset=utf-8'){const blob=content instanceof Blob?content:new Blob([content],{type});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+$('export-button').onclick=()=>{const cols=columns[tab].filter(([k])=>!['next','bgNext','detail','send','reject','adjust'].includes(k));const quote=v=>'"'+String(v??'').replace(/^[=+@-]/,"'$&").replace(/"/g,'""')+'"';download('\ufeff'+[cols.map(x=>quote(x[1])).join(','),...filtered().map(r=>cols.map(([k])=>quote(r[k])).join(','))].join('\r\n'),`特殊offer流程-${tabs[tab]}.csv`,'text/csv;charset=utf-8');$('grid-menu').hidden=true;};
+function dialog(title,html,handler,confirm='确定'){$('action-title').textContent=title;$('action-body').innerHTML=html;$('action-confirm').textContent=confirm;$('action-error').hidden=true;actionHandler=handler;if(!$('action-dialog').open)$('action-dialog').showModal();}
+$('action-close').onclick=$('action-cancel').onclick=()=>$('action-dialog').close();
+$('action-form').onsubmit=async e=>{e.preventDefault();try{const result=await actionHandler(new FormData(e.target));if(result===true)$('action-dialog').close();else if(typeof result==='string'){$('action-error').textContent=result;$('action-error').hidden=false;}}catch(err){$('action-error').textContent='操作未完成：'+err.message;$('action-error').hidden=false;}};
+function rowAction(action,id){const r=rows.find(x=>x.id===id);if(!r)return;
+ if(action==='detail'||action==='resubmit'){openEditor(r,action==='resubmit');return;}
+ if(action==='adjust'){dialog('调整报到时间',`<p>${esc(r.name)} · ${r.id}</p><label>报到时间<input name="entry" type="date" value="${r.entry}" required></label><label>调整说明<textarea name="reason" rows="3"></textarea></label>`,fd=>mutate(id,'调整报到时间',x=>{x.entry=fd.get('entry');x.fields[F.entry]=x.entry;history(x,'调整说明',fd.get('reason'));}));return;}
+ if(action==='close'||action==='reject'){const title=action==='close'?'流程关闭':'Reject Offer';dialog(title,`<p>${esc(r.name)} · ${r.id}</p><label>原因<textarea name="reason" rows="4" required></textarea></label><p class="muted">确认后，这条示例记录将移到“已完成”。</p>`,fd=>mutate(id,title,x=>{x.status=action==='close'?'流程关闭':'Reject Off';history(x,'原因',fd.get('reason'));}));return;}
+ if(action==='send'||action==='authorize'){const isOffer=action==='send';dialog(isOffer?'发送OFFER通知':'发送背调授权邮件',`<p>${esc(r.name)} · ${r.id}</p><label>收件邮箱<input type="email" required name="email" value="${esc(r.fields[F.email]||'')}"></label><label>抄送邮箱<input name="cc" type="email"></label><label>邮件主题<input name="subject" value="${isOffer?'录用通知':'背景调查授权邀请'}" required></label><label>邮件内容<textarea name="body" rows="6">${esc(isOffer?`${r.name}：\n欢迎加入！拟聘职位：${r.job}。\n计划报到时间：${r.entry}。\n请确认录用信息。`:`${r.name}：\n请完成背景调查授权。\n背调类型：${r.bgType}。`)}</textarea></label><p class="notice">本地演示：记录通知内容及状态变化，不发送邮件。</p>`,fd=>mutate(id,isOffer?'模拟发送OFFER通知':'模拟发送背调授权邮件',x=>{x.notifications??=[];x.notifications.push(Object.fromEntries(fd));if(isOffer)x.status='offer已发送';else x.bgStage='待候选人授权';}), '模拟发送');return;}
+ if(action==='bgType'){dialog('修改背调类型',`<p>${esc(r.name)}</p><label>背调类型<select name="type">${bgTypes.map(x=>`<option ${x===r.bgType?'selected':''}>${x}</option>`).join('')}</select></label><label>重点调查<textarea name="remark" rows="3">${esc(r.fields.IS_HIR_BGC_TBL_PW_REMARK||'')}</textarea></label>`,fd=>mutate(id,'修改背调类型',x=>{x.bgType=fd.get('type');x.fields[F.bg]=x.bgType;x.fields.IS_HIR_BGC_TBL_PW_REMARK=fd.get('remark');x.bgStage=x.bgType.startsWith('无需')?'无需背调':'未开始';}));return;}
+ if(action==='report'){dialog('背调报告',`<p>候选人：${esc(r.name)}</p><p>背调类型：${esc(r.bgType)}</p><p>当前环节：${esc(r.bgStage)}　结果：${esc(r.signal||'无异常')}</p><p class="notice">这是用于交互核对的示例报告，不含真实背调材料。</p>`,()=>{download(`<!doctype html><meta charset="utf-8"><title>示例背调报告</title><h1>背调报告（示例）</h1><p>候选人：${esc(r.name)}</p><p>类型：${esc(r.bgType)}</p><p>结果：${esc(r.signal||'无异常')}</p><p>仅供本地流程演示。</p>`,`背调报告-示例-${r.id}.html`,'text/html;charset=utf-8');return true;},'下载示例报告');return;}
+ if(action==='risk'){dialog('背景调查结果',`<p>${esc(r.name)}：<strong>${esc(r.signal)}</strong></p><p>${r.signal==='红灯'?'存在需核实的异常项，请查看报告并核对说明。':['橙灯','黄灯'].includes(r.signal)?'待补充或进一步核实的事项。':'当前示例报告无异常。'}</p><p class="muted">结果及说明为本地演示。</p>`,()=>true);return;}
+ if(action==='confirm'){dialog('确认入职信息',`<p>${esc(r.name)} · ${esc(r.job)}</p><label>计划入职时间<input type="date" name="entry" value="${r.entry}" required></label><label>办公地点<input name="address" value="${esc(r.fields.IS_WFL_HIR_HDR_PWRD_ADDRESS||'')}" required></label><label>备注<textarea name="note" rows="3"></textarea></label><label><input type="checkbox" name="checked" required> 已核对候选人信息及入职材料</label><p class="notice">本次确认仅更新本地示例记录。</p>`,fd=>mutate(id,'确认入职信息',x=>{x.status='信息已审核';x.entry=fd.get('entry');x.fields[F.entry]=x.entry;x.fields.IS_WFL_HIR_HDR_PWRD_ADDRESS=fd.get('address');history(x,'信息核对备注',fd.get('note'));}));}
+}
+const bgTypes=['无需背调/已线下背调','基础背调','标准背调(2段经历)','深度背调(3段经历)'];
+const lookupIds=new Set([F.dept,'BUS_UNIT_TBL_HR_DESCR','COMPANY_TBL_DESCR','GP_PYGRP_DESCR','SAL_GRADE_TBL_DESCR',F.job,'PERSON_NAME_NAME$236$','PERSON_NAME_NAME$93$','PERSON_NAME_NAME$114$','PERSON_NAME_NAME$116$']);
+const computedIds=new Set(['PW_ORGTREE_LINE_DESCR254','IS_WFL_HIR_HDR_PW_HC_DEPT_DESCR','PW_HC_TYPE_VW_DESCR','IS_WFL_HIR_HDR_SUPERVISOR_ID','PERSON_NAME_NAME$95$','C_PRECMP_SALARY_ANNUAL_SALARY','C_PRECMP_SALARY_SINO_AC_ANNBOBUS_T','IS_WFL_HIR_HDR_IS_CON_SALARY$174$','C_PRECMP_SALARY_ANNUAL_RT','C_PRECMP_SALARY_ANNUAL_SALARY$179$','C_PRECMP_SALARY_ACCRUAL_PCT$180$','C_PRECMP_SALARY_IS_BUDGE06','IS_WFL_HIR_HDR_PW_STOCK_VALUE$192$','C_PRECMP_SALARY_SINO_AC_ANNBOBUS_M','C_PRECMP_SALARY_SINO_AC_ANNBOBUS_T$186$','C_PRECMP_SALARY_ACT_PCT_COMPLETE$187$','IS_HIR_BGC_TBL_PW_BGC_MEAL_NAME']);
+function openEditor(r,edit){draft=r?clone(r):{id:String(Math.max(900000,...rows.map(x=>+x.id))+1),name:'',type:'social',status:'未保存',fields:{IS_WFL_HIR_HDR_EMPL_CLASS:'007',IS_WFL_HIR_HDR_IS_PROBATION_PERIO:'02',IS_WFL_HIR_HDR_SUPV_LVL_ID:'009'},attachments:{},history:[],interviews:[],comments:'',bonusSchedule:[{month:1,percent:100}]};draft.type='social';if(draft.fields.IS_WFL_HIR_HDR_EMPL_CLASS==='INT')draft.fields.IS_WFL_HIR_HDR_EMPL_CLASS='007';if(draft.fields.IS_WFL_HIR_HDR_Z_JOBCODE_SEG1==='0')draft.fields.IS_WFL_HIR_HDR_Z_JOBCODE_SEG1='9';editorBaseline=clone(draft);editable=edit;editorTab='approval';$('editor-title').textContent=edit?'提交特殊offer流程':'特殊offer流程详情';$('form-error').hidden=true;renderEditor();$('editor').showModal();document.querySelector('.editor-scroll').scrollTop=0;}
+$('add-candidate').onclick=()=>openEditor(null,true);
+function closeEditor(){if(editable){captureDraft();const old=editorBaseline;if(!old||JSON.stringify(old)!==JSON.stringify(draft)){dialog('返回到列表','<p>当前编辑内容尚未保存，是否放弃本次编辑？</p>',()=>{$('editor').close();return true;},'放弃编辑');return;}}$('editor').close();}
+$('editor-close').onclick=closeEditor;document.querySelectorAll('[data-close-editor]').forEach(e=>e.onclick=closeEditor);$('editor').addEventListener('cancel',e=>{e.preventDefault();closeEditor();});
+function fieldSchema(){const fields=clone(window.OFFER_SCHEMA.social);const extra=[];
+ if(['14','24'].includes(draft.fields[F.channel]))extra.push({id:'IS_WFL_HIR_HDR_CONTACT_NAME',label:draft.fields[F.channel]==='14'?'猎头公司:':'RPO公司:',type:'text',group:'候选人基本信息'});
+ if(draft.fields[F.channel]==='21')extra.push({id:'IS_WFL_HIR_HDR_IS_HIREWAY_EXP',label:'*其他渠道说明:',type:'text',group:'候选人基本信息'});
+ if(draft.fields[F.channel]==='03')extra.push({id:'referrer',label:'*内部推荐人:',type:'text',group:'候选人基本信息'});
+ return [...fields,...extra].filter(f=>!(['PERSON_NAME_NAME$236$','IS_WFL_HIR_HDR_TERMINATION_DT'].includes(f.id)&&draft.fields.IS_WFL_HIR_HDR_IS_RECRUIT_CASE!=='03')&&!(draft.fields.IS_WFL_HIR_HDR_EMPL_CLASS==='001'&&['IS_WFL_HIR_HDR_IS_PROBATION_PERIO','IS_WFL_HIR_HDR_IS_PROBA_SALAR'].includes(f.id)));
+}
+function renderField(f){const v=draft.fields[f.id]??'',label=f.label||'',required=label.startsWith('*'),ro=!editable||computedIds.has(f.id),id='f-'+f.id;
+ if(f.type==='checkbox')return `<div class="check-field"><label><input data-field="${f.id}" type="checkbox" ${v?'checked':''} ${!editable?'disabled':''}>${esc(label)}</label></div>`;
+ let options=f.options;if(f.id===F.bg)options=[{text:'',value:''},...bgTypes.map(x=>({value:x,text:x}))];
+ if(f.id==='IS_WFL_HIR_HDR_Z_JOBCODE_SEG3')options=[{text:'',value:''},...['专业发展','管理发展'].map(x=>({text:x,value:x}))];
+ if(f.id==='IS_WFL_HIR_HDR_EEO_JOB_GROUP')options=[{text:'',value:''},...['技术研发','产品设计','职能管理','市场商务'].map(x=>({text:x,value:x}))];
+ let control;
+ if(f.type==='select-one')control=`<select id="${id}" data-field="${f.id}" ${ro?'disabled':''} ${required?'data-required="true"':''}>${(options||[]).map(o=>`<option value="${esc(o.value)}" ${String(v)===o.value?'selected':''}>${esc(o.text.trim()||'请选择')}</option>`).join('')}</select>`;
+ else if(f.type==='textarea')control=`<textarea id="${id}" rows="3" data-field="${f.id}" ${ro?'readonly':''}>${esc(v)}</textarea>`;
+ else {const type=/TIME$|_DT$/.test(f.id)?'date':/EMAIL/.test(f.id)?'email':/SALAR|_BUDGE|_PAY$|_ANN$|_BON$|SUBSIDY|HOUSE_ALW|STOCK_VALUE/.test(f.id)?'number':'text';control=`<input id="${id}" data-field="${f.id}" type="${type}" ${type==='number'?'min="0" step="0.01"':''} value="${esc(v)}" ${ro?'readonly':''} ${lookupIds.has(f.id)?'readonly':''} ${required?'data-required="true"':''} placeholder="${esc(f.placeholder||'')}">`;}
+ if(lookupIds.has(f.id))control+=`<button type="button" class="lookup" data-lookup="${f.id}" aria-label="选择${esc(label.replace(/[*:]/g,''))}" ${!editable?'disabled':''}>⌕</button>`;
+ return `<div class="field ${f.type==='textarea'?'full':''}"><label for="${id}">${required?'<span class="required">*</span>':''}${esc(label.replace(/^\*/,''))}</label><div><div class="field-control">${control}</div>${f.id===F.bg?'<button type="button" class="link" id="choose-package">选择套餐</button>':''}</div></div>`;
+}
+function renderEditor(){
+ $('record-status').textContent=draft.status;$('record-id').textContent=draft.id;$('offer-types').textContent='招聘类型：社招';
+ const groups=['候选人基本信息','组织架构信息','编制信息','职务信息','薪资信息','上家公司信息','背景调查'],fields=fieldSchema();
+ $('form-sections').innerHTML=groups.map(g=>{const items=fields.filter(f=>f.group===g);if(!items.length)return '';return `<section class="form-section"><h3>${g}</h3><div class="form-grid">${items.map(renderField).join('')}</div>${g==='编制信息'?'<p style="text-align:right"><button type="button" class="link" id="hc-detail">HC编制详情</button></p>':''}${g==='薪资信息'?renderBonus():''}</section>`;}).join('');
+ $('offer-comments').value=draft.comments||'';$('offer-comments').readOnly=!editable;renderAttachments();renderHistory();renderInterview();updateEditorTab();calculate();
+ $('save-button').hidden=$('submit-button').hidden=!editable;
+ document.querySelectorAll('[data-lookup]').forEach(b=>b.onclick=()=>lookup(b.dataset.lookup));
+ if($('choose-package'))$('choose-package').onclick=choosePackage;
+ if($('hc-detail'))$('hc-detail').onclick=()=>dialog('HC编制详情',`<dl><dt>编制部门</dt><dd>${esc(draft.fields.IS_WFL_HIR_HDR_PW_HC_DEPT_DESCR||draft.fields[F.dept]||'尚未选择')}</dd><dt>编制类别</dt><dd>正式编制</dd><dt>新增 / 替换</dt><dd>${draft.fields.IS_WFL_HIR_HDR_IS_RECRUIT_CASE==='03'?'替换':'新增'}</dd></dl><p class="notice">演示编制信息，实际预算与可用编制需由原系统校验。</p>`,()=>true);
+ if($('add-installment'))$('add-installment').onclick=()=>{captureDraft();draft.bonusSchedule.push({month:draft.bonusSchedule.length*6+1,percent:0});renderEditor();};
+ document.querySelectorAll('[data-remove-installment]').forEach(b=>b.onclick=()=>{captureDraft();draft.bonusSchedule.splice(+b.dataset.removeInstallment,1);renderEditor();});
+ if($('bonus-preview'))$('bonus-preview').onclick=()=>{captureDraft();dialog('签约金协议预览',`<h3>签约金协议（本地演示）</h3><p>候选人：${esc(draft.fields[F.name]||'待填写')}</p><p>总金额：${esc(draft.bonusAmount||0)} 元</p><p>返还方式：${esc(draft.bonusTemplate||'待选择')}</p><p>发放节奏：${(draft.bonusSchedule||[]).map(x=>`入职满${x.month}月，${x.percent}%`).join('；')}</p><p class="notice">仅用于功能预览，不构成实际签约文件。</p>`,()=>true);};
+}
+function renderBonus(){let html='';if(draft.fields[F.bonus]){draft.bonusSchedule??=[{month:1,percent:100}];html+=`<div class="bonus-area"><h3>签约金</h3><div class="form-grid"><label>签约金总金额：<input id="bonus-amount" type="number" min="0" step="0.01" value="${draft.bonusAmount||0}" ${!editable?'readonly':''}></label><button id="bonus-preview" type="button" class="link">签约金协议预览</button></div><p class="muted">各期签约金计入下表对应月份工资，随该月工资发放。</p><table class="small-table"><thead><tr><th>入职满X月</th><th>发放比例%</th><th>发放金额（元）</th><th></th></tr></thead><tbody>${draft.bonusSchedule.map((s,i)=>`<tr><td><input data-installment="${i}" data-key="month" type="number" min="1" value="${s.month}" ${!editable?'readonly':''}></td><td><input data-installment="${i}" data-key="percent" type="number" min="0" max="100" step="0.01" value="${s.percent}" ${!editable?'readonly':''}></td><td id="bonus-sum-${i}">${((draft.bonusAmount||0)*s.percent/100).toFixed(2)}</td><td>${editable&&draft.bonusSchedule.length>1?`<button type="button" class="link" data-remove-installment="${i}">移除</button>`:''}</td></tr>`).join('')}</tbody></table>${editable?'<p><button id="add-installment" type="button" class="link">添加发放期次</button></p>':''}<label>签约金模版：<select id="bonus-template" ${!editable?'disabled':''}><option value="">请选择</option>${['阶梯返还，绑定期1年，任何原因离职均还款','按天折算返还，绑定期2年，任何原因离职均还款','按天折算返还，绑定期3年，任何原因离职均还款'].map(t=>`<option ${draft.bonusTemplate===t?'selected':''}>${t}</option>`).join('')}</select></label></div>`;}
+ if(draft.fields[F.stock])html+=`<div class="bonus-area"><h3>长期激励</h3><div class="form-grid"><label>长期激励每年价值：<input id="stock-value" type="number" min="0" value="${draft.stockValue||0}" ${!editable?'readonly':''}></label><label>长期激励说明：<input id="stock-note" value="${esc(draft.stockNote||'')}" ${!editable?'readonly':''}></label></div></div>`;return html;}
+function captureDraft(){if(!draft)return;document.querySelectorAll('[data-field]').forEach(e=>draft.fields[e.dataset.field]=e.type==='checkbox'?e.checked:e.value);draft.comments=$('offer-comments').value;if($('bonus-amount'))draft.bonusAmount=+$('bonus-amount').value;if($('bonus-template'))draft.bonusTemplate=$('bonus-template').value;if($('stock-value'))draft.stockValue=+$('stock-value').value;if($('stock-note'))draft.stockNote=$('stock-note').value;document.querySelectorAll('[data-installment]').forEach(e=>draft.bonusSchedule[+e.dataset.installment][e.dataset.key]=+e.value);}
+$('candidate-form').addEventListener('change',e=>{if(!editable)return;captureDraft();if([F.channel,F.bonus,F.stock,'IS_WFL_HIR_HDR_IS_RECRUIT_CASE','IS_WFL_HIR_HDR_EMPL_CLASS'].includes(e.target.dataset.field))renderEditor();else calculate();});
+$('candidate-form').addEventListener('input',e=>{if(!editable)return;if(e.target.dataset.field||e.target.dataset.installment||['bonus-amount','stock-value'].includes(e.target.id)){captureDraft();calculate();}});
+function calculate(){if(!draft)return;const f=draft.fields,n=id=>Number(f[id])||0;const salary=n(F.salary),annual=salary*(12+n('IS_WFL_HIR_HDR_IS_ANN_BON')),benefits=(Number((window.OFFER_SCHEMA.social.find(x=>x.id==='IS_WFL_HIR_HDR_PWRD_MEAL_SUP').options.find(o=>o.value===f.IS_WFL_HIR_HDR_PWRD_MEAL_SUP)||{}).text)||0)+n('IS_WFL_HIR_HDR_SINO_ER_HOUSE_ALW'),stock=f[F.stock]?Number(draft.stockValue)||0:0,total=annual+benefits*12+stock,oldAnnual=n('C_PRECMP_SALARY_PWRD_ER_BASE_SAL')*12+n('C_PRECMP_SALARY_PWRD_ER_ANN_PAY'),oldTotal=oldAnnual+n('C_PRECMP_SALARY_IS_BUDGE04')*12+n('C_PRECMP_SALARY_IS_BUDGE05');
+ const vals={'C_PRECMP_SALARY_ANNUAL_SALARY':annual,'C_PRECMP_SALARY_SINO_AC_ANNBOBUS_T':total,'IS_WFL_HIR_HDR_IS_CON_SALARY$174$':salary,'C_PRECMP_SALARY_PWRD_ANN':salary*n('IS_WFL_HIR_HDR_IS_ANN_BON'),'C_PRECMP_SALARY_ANNUAL_RT':oldAnnual,'C_PRECMP_SALARY_ANNUAL_SALARY$179$':annual,'C_PRECMP_SALARY_ACCRUAL_PCT$180$':oldAnnual?(annual/oldAnnual-1)*100:0,'C_PRECMP_SALARY_IS_BUDGE06':benefits,'IS_WFL_HIR_HDR_PW_STOCK_VALUE$192$':stock,'C_PRECMP_SALARY_SINO_AC_ANNBOBUS_M':oldTotal,'C_PRECMP_SALARY_SINO_AC_ANNBOBUS_T$186$':total,'C_PRECMP_SALARY_ACT_PCT_COMPLETE$187$':oldTotal?(total/oldTotal-1)*100:0};
+ Object.entries(vals).forEach(([id,v])=>{const el=$('f-'+id);if(el){f[id]=v.toFixed(2);el.value=f[id];el.readOnly=true;el.title='本地演示计算；正式薪酬口径以原系统为准';}});draft.bonusSchedule?.forEach((s,i)=>{if($('bonus-sum-'+i))$('bonus-sum-'+i).textContent=((draft.bonusAmount||0)*s.percent/100).toFixed(2);});}
+function lookup(id){captureDraft();const dict=id===F.dept?['技术开发部','HR产品部','美术部','策划部','财务部','流程与资源管理部']:id==='BUS_UNIT_TBL_HR_DESCR'?['示例业务单位','示例游戏业务单位']:id==='COMPANY_TBL_DESCR'?['示例合同公司','示例技术有限公司']:id==='SAL_GRADE_TBL_DESCR'?['P1','P2','P3','P4','P5','M1','M2']:id===F.job?['开发工程师','产品经理','游戏策划','美术设计师','财务会计师','实习生']:id==='GP_PYGRP_DESCR'?['示例薪资组','示例实习薪资组']:['示例主管','示例导师','示例同事'];let selected='';dialog('选择'+(fieldSchema().find(x=>x.id===id)?.label||'内容').replace(/[*:]/g,''),`<input class="lookup-search" id="lookup-search" placeholder="输入关键字筛选"><div class="choice-list" id="lookup-options">${dict.map(x=>`<button type="button" data-choice="${esc(x)}">${x}</button>`).join('')}</div><p class="muted">以上为示例选项，可在下方填写用于演示的值。</p><label>选定值<input name="selected" id="lookup-selected" value="${esc(draft.fields[id]||'')}" required></label>`,fd=>{draft.fields[id]=fd.get('selected');if(id===F.dept){draft.fields.PW_ORGTREE_LINE_DESCR254='示例业务平台/'+fd.get('selected');draft.fields.IS_WFL_HIR_HDR_PW_HC_DEPT_DESCR=fd.get('selected');draft.fields.PW_HC_TYPE_VW_DESCR=draft.type==='intern'?'实习生编制':'正式编制';draft.fields.IS_WFL_HIR_HDR_SUPERVISOR_ID='DEMO001';draft.fields['PERSON_NAME_NAME$95$']='示例主管';}renderEditor();return true;});$('lookup-search').oninput=e=>document.querySelectorAll('[data-choice]').forEach(b=>b.hidden=!b.dataset.choice.includes(e.target.value));document.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>{$('lookup-selected').value=b.dataset.choice;document.querySelectorAll('[data-choice]').forEach(x=>x.classList.toggle('selected',x===b));});}
+function choosePackage(){if(!editable){toast('详情为只读');return;}captureDraft();dialog('选择背调套餐',`<label>套餐类型<select name="type">${bgTypes.map(x=>`<option ${draft.fields[F.bg]===x?'selected':''}>${x}</option>`).join('')}</select></label><label>提供简历进行比对 <input type="checkbox" name="compare" ${draft.fields.IS_HIR_BGC_TBL_SEND_FLAG?'checked':''}></label>`,fd=>{draft.fields[F.bg]=fd.get('type');draft.fields.IS_HIR_BGC_TBL_PW_BGC_MEAL_NAME=fd.get('type');draft.fields.IS_HIR_BGC_TBL_SEND_FLAG=fd.has('compare');renderEditor();return true;});}
+function db(){return new Promise((resolve,reject)=>{const req=indexedDB.open('special-offer-files-v1',1);req.onupgradeneeded=()=>req.result.createObjectStore('files');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
+async function storeFile(file){const conn=await db(),id=crypto.randomUUID();await new Promise((res,rej)=>{const tx=conn.transaction('files','readwrite');tx.objectStore('files').put(file,id);tx.oncomplete=res;tx.onerror=()=>rej(tx.error);});conn.close();return id;}
+async function getFile(id){const conn=await db();const result=await new Promise((res,rej)=>{const r=conn.transaction('files').objectStore('files').get(id);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});conn.close();return result;}
+function renderAttachments(){const names=['简历','薪资证明','背调报告','其他','学历特批邮件'];$('attachments').innerHTML=`<section class="form-section"><h3>入职附件（请上传不大于10MB的 pdf、jpg、jpeg、png 文件）</h3><table class="attachment-table"><thead><tr><th>入职附件类型</th><th>附件名称</th><th>操作</th></tr></thead><tbody>${names.map((n,i)=>{const f=draft.attachments[n];const upload=editable?`<input class="file-input" aria-label="上传${n}" type="file" accept=".pdf,.jpg,.jpeg,.png" data-upload="${i}">`+(f?`<button type="button" class="link" data-remove-file="${i}">移除</button>`:''):'';return `<tr><td>${n==='简历'||n==='薪资证明'&&draft.type==='social'?'*':''}${n}</td><td>${f?`<button type="button" class="link" data-view-file="${i}">${esc(f.name)}</button>`:'—'}</td><td>${upload}</td></tr>`;}).join('')}</tbody></table></section>`;
+ document.querySelectorAll('[data-upload]').forEach(e=>e.onchange=async()=>{const file=e.files[0];if(!file)return;if(file.size>10*1024*1024||!/\.(pdf|jpe?g|png)$/i.test(file.name)){toast('请选择不大于10MB的 PDF、JPG、JPEG 或 PNG 文件');e.value='';return;}try{const id=await storeFile(file);draft.attachments[names[+e.dataset.upload]]={name:file.name,size:file.size,type:file.type,id};renderAttachments();toast('附件已加入本地表单，请保存');}catch{toast('附件保存失败，请检查浏览器是否允许本地存储。');}});
+ document.querySelectorAll('[data-remove-file]').forEach(e=>e.onclick=()=>{delete draft.attachments[names[+e.dataset.removeFile]];renderAttachments();});
+ document.querySelectorAll('[data-view-file]').forEach(e=>e.onclick=async()=>{const meta=draft.attachments[names[+e.dataset.viewFile]];if(meta.demo){dialog('示例附件',`<p>${esc(meta.name)} 为示例记录的附件占位。新建表单中上传的本地附件可保存并下载。</p>`,()=>true);return;}try{const file=await getFile(meta.id);if(!file)throw Error();download(file,meta.name);}catch{toast('本机未找到该附件，请重新上传。');}});
+}
+function renderHistory(){const h=draft.history||[];$('approval-history').innerHTML=h.length?`<h3>审批流程 <button type="button" id="toggle-notes" class="link" style="float:right">查看 / 隐藏备注</button></h3><div class="history-nodes">${['COO'].map(role=>`<div class="history-node ${['已提交','正在处理审批'].includes(draft.status)?'pending':''}">${role}<small>${draft.status==='已保存'?'未提交':['审批完成','offer已发送','已接受Offer','个人信息已提交','信息已审核','已报到'].includes(draft.status)?'已批准（示例）':'等待处理（示例）'}</small></div>`).join('')}</div><div id="history-notes">${h.map(x=>`<p><strong>${esc(x.actor)}</strong>　${esc(x.at)}　${esc(x.action)}<br><span class="muted">${esc(x.note)}</span></p>`).join('')}</div>`:'';if($('toggle-notes'))$('toggle-notes').onclick=()=>$('history-notes').hidden=!$('history-notes').hidden;}
+function renderInterview(){$('interview-panel').innerHTML=`<button type="button" id="sync-interviews" class="link">重新同步面试记录</button>${draft.interviews.length?draft.interviews.map((r,i)=>`<section class="interview-card"><strong>面试信息 ${i+1}/${draft.interviews.length}</strong><dl><dt>面试日期</dt><dd>${esc(r.date)}</dd><dt>面试类别</dt><dd>${esc(r.type)}</dd><dt>面试人 ID</dt><dd>${esc(r.interviewer)}</dd><dt>面试结果</dt><dd>${esc(r.result)}</dd></dl><label>备注<textarea data-interview="${i}" ${!editable?'readonly':''}>${esc(r.notes)}</textarea></label></section>`).join(''):'<p class="empty">暂无面试记录</p>'}`;$('sync-interviews').onclick=()=>{dialog('重新同步面试记录','<p>本地副本没有连接招聘系统，可载入示例面试记录核对展示效果。</p>',()=>{if(!draft.interviews.length)draft.interviews=[{date:'2026-11-05',type:'专业面试',interviewer:'示例面试官',result:'通过',notes:'本地示例记录'}];renderInterview();toast('已载入示例面试记录');return true;},'载入示例记录');};document.querySelectorAll('[data-interview]').forEach(e=>e.oninput=()=>draft.interviews[+e.dataset.interview].notes=e.value);}
+function updateEditorTab(){$('approval-panel').hidden=editorTab!=='approval';$('interview-panel').hidden=editorTab!=='interview';document.querySelectorAll('[data-editor-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.editorTab===editorTab)));}
+document.querySelectorAll('[data-editor-tab]').forEach(b=>b.onclick=()=>{captureDraft();editorTab=b.dataset.editorTab;updateEditorTab();});
+function validate(submit){const fields=fieldSchema();if(!draft.fields[F.name]?.trim())return {id:F.name,message:'请填写姓名'};if(!submit)return null;for(const f of fields){if(f.label?.startsWith('*')&&!computedIds.has(f.id)&&!String(draft.fields[f.id]??'').trim())return{id:f.id,message:'请填写'+f.label.replace(/[*:]/g,'')};}
+ if(!/^\S+@\S+\.\S+$/.test(draft.fields[F.email]||''))return{id:F.email,message:'请填写有效电子邮箱'};if(!/^[\d+\s-]{7,20}$/.test(draft.fields.IS_WFL_HIR_HDR_MOBILE_PHONE||''))return{id:'IS_WFL_HIR_HDR_MOBILE_PHONE',message:'请填写有效电话号码'};
+ for(const f of fields){const el=$('f-'+f.id);if(el?.type==='number'&&!el.validity.valid)return{id:f.id,message:f.label+'应为有效的非负数值'};}
+ if(!draft.comments.trim())return{id:'comments',message:'请填写Offer说明'};if(!draft.attachments.简历)return{message:'请上传简历'};if(draft.type==='social'&&!draft.attachments.薪资证明)return{message:'请上传薪资证明'};if(draft.fields.IS_WFL_HIR_HDR_IS_EDU_PASS==='N'&&!draft.attachments.学历特批邮件)return{message:'学历不符合要求时，请上传学历特批邮件'};
+ if(draft.fields[F.bonus]&&draft.type!=='intern'){if(!draft.fields[F.entry])return{message:'请先填写计划到岗时间'};if(!(draft.bonusAmount>0))return{message:'请填写大于0的签约金总金额'};if(!draft.bonusTemplate)return{message:'请选择签约金模版'};if(Math.abs(draft.bonusSchedule.reduce((a,s)=>a+s.percent,0)-100)>.001||draft.bonusSchedule.some(s=>s.percent<=0||s.month<1))return{message:'各期发放比例必须大于0，合计为100%，且发放月份不得小于1'};}
+ return null;}
+function saveCandidate(submit){captureDraft();calculate();const error=validate(submit);if(error){editorTab='approval';updateEditorTab();$('form-error').textContent=error.message;$('form-error').hidden=false;const field=$('f-'+error.id)||(error.id==='comments'?$('offer-comments'):$('form-error'));field.scrollIntoView({block:'center'});field.focus();return;}
+ const commit=()=>{const copy=clone(draft);copy.name=copy.fields[F.name];copy.entry=copy.fields[F.entry]||'';copy.department=copy.fields.PW_ORGTREE_LINE_DESCR254||copy.fields[F.dept]||'';copy.job=copy.fields[F.job]||copy.fields.IS_WFL_HIR_HDR_IS_POSITION_OUT||'';copy.status=submit?'已提交':'已保存';copy.submitted=submit?new Date().toLocaleDateString('sv-SE'):copy.submitted||'';copy.operator=submit?'示例审批人':'';copy.background=copy.type!=='intern';copy.bgType=copy.fields[F.bg]||'基础背调';copy.bgStage=copy.bgType.startsWith('无需')?'无需背调':'未开始';history(copy,submit?'提交审批':'保存草稿',copy.comments);const before=clone(rows),i=rows.findIndex(r=>r.id===copy.id);if(i>=0)rows[i]=copy;else rows.unshift(copy);if(!persist()){rows=before;return false;}$('editor').close();setTab(submit?2:0);toast(submit?'已提交本地演示审批流程':'本地草稿已保存');return true;};
+ if(submit)dialog('提交特殊offer流程',`<p>候选人：${esc(draft.name||draft.fields[F.name])}</p><p>提交后可在 On Going 查看此示例流程。</p><p class="notice">此操作仅保存在本机，不向原系统提交审批。</p>`,commit,'提交');else commit();}
+$('save-button').onclick=()=>saveCandidate(false);$('candidate-form').onsubmit=e=>{e.preventDefault();saveCandidate(true);};
+renderList();
+})();
+
+</script></body></html>
