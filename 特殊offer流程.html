@@ -4250,7 +4250,7 @@ function fieldSchema(){const fields=clone(window.OFFER_SCHEMA.social);const extr
  if(['14','24'].includes(draft.fields[F.channel]))extra.push({id:'IS_WFL_HIR_HDR_CONTACT_NAME',label:draft.fields[F.channel]==='14'?'猎头公司:':'RPO公司:',type:'text',group:'候选人基本信息'});
  if(draft.fields[F.channel]==='21')extra.push({id:'IS_WFL_HIR_HDR_IS_HIREWAY_EXP',label:'*其他渠道说明:',type:'text',group:'候选人基本信息'});
  if(draft.fields[F.channel]==='03')extra.push({id:'referrer',label:'*内部推荐人:',type:'text',group:'候选人基本信息'});
- return [...fields,...extra].filter(f=>!(['PERSON_NAME_NAME$236$','IS_WFL_HIR_HDR_TERMINATION_DT'].includes(f.id)&&draft.fields.IS_WFL_HIR_HDR_IS_RECRUIT_CASE!=='03')&&!(draft.fields.IS_WFL_HIR_HDR_EMPL_CLASS==='001'&&['IS_WFL_HIR_HDR_IS_PROBATION_PERIO','IS_WFL_HIR_HDR_IS_PROBA_SALAR'].includes(f.id)));
+ return [...fields,...extra].filter(f=>f.group!=='编制信息'&&!(['PERSON_NAME_NAME$236$','IS_WFL_HIR_HDR_TERMINATION_DT'].includes(f.id)&&draft.fields.IS_WFL_HIR_HDR_IS_RECRUIT_CASE!=='03')&&!(draft.fields.IS_WFL_HIR_HDR_EMPL_CLASS==='001'&&['IS_WFL_HIR_HDR_IS_PROBATION_PERIO','IS_WFL_HIR_HDR_IS_PROBA_SALAR'].includes(f.id)));
 }
 function renderField(f){const v=draft.fields[f.id]??'',label=f.label||'',required=label.startsWith('*'),ro=!editable||computedIds.has(f.id),id='f-'+f.id;
  if(f.type==='checkbox')return `<div class="check-field"><label><input data-field="${f.id}" type="checkbox" ${v?'checked':''} ${!editable?'disabled':''}>${esc(label)}</label></div>`;
@@ -4266,7 +4266,7 @@ function renderField(f){const v=draft.fields[f.id]??'',label=f.label||'',require
 }
 function renderEditor(){
  $('record-status').textContent=draft.status;$('record-id').textContent=draft.id;$('offer-types').textContent='招聘类型：社招';
- const groups=['候选人基本信息','组织架构信息','编制信息','职务信息','薪资信息','上家公司信息'],fields=fieldSchema();
+ const groups=['候选人基本信息','组织架构信息','职务信息','薪资信息','上家公司信息'],fields=fieldSchema();
  $('form-sections').innerHTML=groups.map(g=>{const items=fields.filter(f=>f.group===g);if(!items.length)return '';return `<section class="form-section"><h3>${g}</h3><div class="form-grid">${items.map(renderField).join('')}</div>${g==='编制信息'?'<p style="text-align:right"><button type="button" class="link" id="hc-detail">HC编制详情</button></p>':''}${g==='薪资信息'?renderBonus():''}</section>`;}).join('');
  $('offer-comments').value=draft.comments||'';$('offer-comments').readOnly=!editable;renderAttachments();renderHistory();renderInterview();updateEditorTab();calculate();
  $('save-button').hidden=$('submit-button').hidden=!editable;
